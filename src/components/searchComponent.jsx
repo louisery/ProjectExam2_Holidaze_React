@@ -48,8 +48,6 @@ export default class SearchComponent extends React.Component {
   }
 
   render() {
-    const app = this;
-
     return (
       <div className="[ row ]">
         <div className="[ col-sm-12 ] [ search ]">
