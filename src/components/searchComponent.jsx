@@ -1,15 +1,50 @@
 import React from "react";
+import EstablishmentsData from "../json/establishments.json";
+
+import { Link } from "react-router-dom";
 
 export default class SearchComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.handleSearchTerm = this.handleSearchTerm.bind(this);
+
+    this.state = {
+      searchWord: "",
+      searchResults: []
+    };
   }
 
-  handleSearchTerm() {
-    const app = this;
-    let phrase = app.refs.searchTerm.value;
-    app.props.onSearchTerm(phrase);
+  handleSearch(event) {
+    let searchWord = event.target.value;
+
+    let searchHits = EstablishmentsData.filter(
+      est =>
+        est.establishmentName.toLowerCase().indexOf(searchWord.toLowerCase()) >=
+        0
+    );
+
+    if (searchWord.length > 0) {
+      this.setState({
+        searchWord: searchWord,
+        searchResults: searchHits
+      });
+    } else {
+      this.setState({
+        searchWord: searchWord,
+        searchResults: []
+      });
+    }
+  }
+
+  renderSearchResults() {
+    return (
+      <div>
+        {this.state.searchResults.map(r => (
+          <Link to={`/hotel-specific/${r.id}`} key={`searchresult-${r.id}`}>
+            <div>{r.establishmentName}</div>
+          </Link>
+        ))}
+      </div>
+    );
   }
 
   render() {
@@ -30,9 +65,10 @@ export default class SearchComponent extends React.Component {
               placeholder="Search for a Hotel, Guesthouse or B&B"
               aria-label="Search"
               ref="searchTerm"
-              onChange={app.handleCharacterSearchTerm}
+              onChange={this.handleSearch.bind(this)}
             />
           </div>
+          {this.renderSearchResults()}
         </div>
       </div>
     );
