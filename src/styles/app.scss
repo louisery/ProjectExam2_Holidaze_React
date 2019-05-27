@@ -1,0 +1,79 @@
+// imports
+@import "partials/variables";
+@import "partials/navbar";
+@import "partials/footer";
+@import "partials/homepage";
+@import "partials/form";
+@import "partials/login";
+@import "partials/admin";
+@import "partials/hotels";
+@import "partials/albery";
+
+// Global styles
+
+body {
+    font-family: $body-font;
+    background-color: $bg-blue;
+    color: white;
+}
+
+h1, h2, h3 {
+    font-family: $heading-font;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.row {
+    margin-bottom: 40px;
+}
+
+.btn {
+    font-family: $button-font;
+    text-transform: uppercase;
+    color: $dark-blue;
+    background-color: $light-blue;
+    border-radius: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.split-3 {
+    background: -webkit-linear-gradient(130deg, $dark-blue 70%, $element-blue 40%);
+    background: -o-linear-gradient(130deg, $dark-blue 70%, $element-blue 40%);
+    background: -moz-linear-gradient(130deg, $dark-blue 70%, $element-blue 40%);
+    background: linear-gradient(130deg, $dark-blue 70%, $element-blue 40%);
+    padding: 60px;
+    margin-bottom: 40px;
+}
+
+.img--rounded {
+    border-radius: 25px;
+}
+
+img {
+    box-shadow: 2px 6px 10px 5px rgba($bg-blue, $alpha: 0.3);
+}
+
+.hotel-icons {
+    &--size {
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+}

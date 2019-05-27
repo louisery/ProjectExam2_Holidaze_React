@@ -1,0 +1,29 @@
+.footer {
+    background-color: $dark-blue;
+    color: white;
+
+    &__text {
+        padding-top: 30px;
+
+        &--logo {
+            font-family: $logo-font;
+            font-size: 20px;
+        }
+    }
+
+    &__social {
+        padding-top: 30px;
+        font-size: 40px;
+        color: $light-blue;
+    }
+
+    &__social--link {
+        padding: 10px;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+// footer text midtstilt small screens

@@ -1,0 +1,60 @@
+.contact {
+    &__heading {
+        margin-top: 20px;
+    }
+
+    &__form {
+        background: -webkit-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        background: -o-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        background: -moz-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        background: linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        border-radius: 25px;
+        padding: 40px;
+    }
+}
+
+.enquiry {
+    &__heading {
+        margin-top: 20px;
+    }
+
+    &__form {
+        background: -webkit-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        background: -o-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        background: -moz-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        background: linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        border-radius: 25px;
+        padding: 40px;
+    }
+}
+
+.establishment {
+    &__heading {
+        margin-top: 20px;
+    }
+
+    &__form {
+        background: -webkit-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        background: -o-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        background: -moz-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        background: linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+        border-radius: 25px;
+        padding: 40px;
+    }
+}
+
+.padding-left {
+    padding-left: 0;
+}
+
+.padding-right {
+    padding-right: 0;
+}
+
+.form-control {
+    border-radius: 15px;
+}
+
+form {
+    box-shadow: 2px 6px 10px 5px rgba(black, $alpha: 0.3);
+}

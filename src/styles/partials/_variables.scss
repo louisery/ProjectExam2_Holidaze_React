@@ -1,0 +1,16 @@
+$light-blue: #57c4f0;
+$element-blue: #3977bc;
+$dark-blue: #004985;
+$bg-blue: #032a4e;
+
+// Import Google Fonts
+$font: "https://use.typekit.net/xfg0rpw.css";
+
+@if global_variable_exists(font) {
+    @import url($font);
+}
+
+$logo-font: continuo, sans-serif;
+$body-font: adelle-sans-ultra-thin, sans-serif;
+$button-font: bree-serif, serif;
+$heading-font: bree, sans-serif;

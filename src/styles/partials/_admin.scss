@@ -1,0 +1,21 @@
+.enquiries {
+    background-color: $dark-blue;
+    padding: 30px 40px 5px 40px;
+}
+
+.messages {
+    background: -webkit-linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    background: -o-linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    background: -moz-linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    background: linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    padding: 30px 40px 5px 40px;
+
+    &__heading {
+        font-size: 20px;
+    }
+
+    #hr--msg {
+        border: 1px solid $element-blue;
+        margin-bottom: 40px;
+    }
+}

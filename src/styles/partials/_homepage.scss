@@ -1,0 +1,35 @@
+#heading-logo {
+    font-family: $logo-font;
+    font-size: 60px;
+    margin-top: 60px;
+    letter-spacing: 15px;
+}
+
+.icons {
+    &__heading {
+        font-size: 18px;
+        padding: 5px;
+        color: white !important;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &--opacity:hover {
+        opacity: 0.5;
+    }
+}
+
+.search {
+    background: -webkit-linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    background: -o-linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    background: -moz-linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    background: linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    border-radius: 25px;
+    padding: 40px;
+}
+
+.img--padding {
+    padding: 20px;
+}

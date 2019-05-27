@@ -1,0 +1,22 @@
+.navbar {
+    background-color: $dark-blue !important;
+
+    &__brand {
+        font-family: $logo-font;
+        color: white;
+    }
+
+    &__link a {
+        color: $light-blue;
+        font-family: $button-font;
+        text-transform: uppercase;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        &:hover {
+            color: white;
+            border-bottom: 3px solid $light-blue;
+            text-decoration: none;
+        }
+    }
+}
