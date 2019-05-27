@@ -1,46 +1,28 @@
 import React from "react";
-import axios from "axios";
-import HotelSpecificComponent from "../components/hotelSpecificComponent";
 import CarouselComponent from "../components/carouselComponent";
 
-// let specificEstablishment = require("../json/establishments.json");
-
-// for (let i = 0; i < specificEstablishment.length; i++) {
-//   let obj = specificEstablishment[i];
-
-//   console.log("Name: " + obj.establishmentName + ", " + obj.description);
-// }
+import EstablishmentData from "../json/establishments.json";
 
 export default class HotelSpecific extends React.Component {
   constructor(props) {
     super(props);
+    let id = this.props.match.params.id;
     this.state = {
-      establishmentObj: [],
-      establishmentId: this.props.match.params.id
+      establishmentObj: EstablishmentData.find(obj => obj.id === id),
+      establishmentId: id
     };
   }
 
-  componentDidMount() {
-    const app = this;
-    app.getData();
-  }
-
-  getData() {
-    // const app = this;
-    // let specificEstablishment = require("../json/establishments.json");
-    // specificEstablishment.forEach((value, key) => {
-    //   app
-    // })
-  }
-
   render() {
+    let hotel = this.state.establishmentObj;
+
     return (
       <div>
         <div className="[ row ]">
           <div className="[ col-sm-12 ]">
             <div className="[ character ]">
               <div className="[ character__info ]">
-                <h1>Hotel Specific</h1>
+                <h1>{hotel.establishmentName}</h1>
               </div>
             </div>
           </div>
