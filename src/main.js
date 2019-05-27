@@ -20,7 +20,7 @@ const routes = (
       <App>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/hotels" component={Hotel} />
-        <Route path="/hotel-specific" component={HotelSpecific} />
+        <Route path="/hotel-specific/:id" component={HotelSpecific} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/admin" component={Admin} />
