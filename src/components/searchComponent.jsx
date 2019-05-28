@@ -1,6 +1,5 @@
 import React from "react";
 import EstablishmentsData from "../json/establishments.json";
-
 import { Link } from "react-router-dom";
 
 export default class SearchComponent extends React.Component {

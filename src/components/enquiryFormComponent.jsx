@@ -1,6 +1,48 @@
 import React from "react";
+import EstablishmentsData from "../json/establishments.json";
 
 export default class EnquiryFormComponent extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      searchWord: "",
+      searchResults: []
+    };
+  }
+
+  handleSearch(event) {
+    let searchWord = event.target.value;
+
+    let searchHits = EstablishmentsData.filter(
+      est =>
+        est.establishmentName.toLowerCase().indexOf(searchWord.toLowerCase()) >=
+        0
+    );
+
+    if (searchWord.length > 0) {
+      this.setState({
+        searchWord: searchWord,
+        searchResults: searchHits
+      });
+    } else {
+      this.setState({
+        searchWord: searchWord,
+        searchResults: []
+      });
+    }
+  }
+
+  renderSearchResults() {
+    return (
+      <div>
+        {this.state.searchResults.map(r => (
+          <div>{r.establishmentName}</div>
+        ))}
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="[ row ] ">
@@ -19,7 +61,11 @@ export default class EnquiryFormComponent extends React.Component {
                 id="establishment"
                 readonly
                 className="[ form-control ]"
+                onChange={this.handleSearch.bind(this)}
               />
+              <div className="search-sug">
+                <p>Suggestion: {this.renderSearchResults()}</p>
+              </div>
             </div>
             <div className="[ form-group ] [ row ]">
               <div className="[ col-sm-6 ]">
