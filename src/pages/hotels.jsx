@@ -1,15 +1,22 @@
 import React from "react";
-// import HotelComponent from "../components/hotelComponent";
-import EstablishmentData from "../json/establishments.json";
+import axios from "axios";
+import HotelComponent from "../components/hotelComponent";
 
 import { Link } from "react-router-dom";
 
 export default class Hotel extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hotels: EstablishmentData
-    };
+  state = {
+    hotels: []
+  };
+
+  componentDidMount() {
+    axios
+      .get("http://192.168.64.2/hotel-booking/server/establishments.json")
+      .then(res => {
+        const hotels = res.data;
+        this.setState({ hotels });
+      });
+    // let getHotel = require("../json/establishments.json");
   }
 
   render() {
