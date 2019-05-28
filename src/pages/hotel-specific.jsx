@@ -1,7 +1,7 @@
 import React from "react";
 import CarouselComponent from "../components/carouselComponent";
-
 import EstablishmentData from "../json/establishments.json";
+import { Link } from "react-router-dom";
 
 export default class HotelSpecific extends React.Component {
   constructor(props) {
@@ -23,10 +23,12 @@ export default class HotelSpecific extends React.Component {
             <div className="[ character ]">
               <div className="[ character__info ]">
                 <h1>{hotel.establishmentName}</h1>
+                <p className="[ text-center ]">{hotel.description}</p>
               </div>
             </div>
           </div>
         </div>
+
         <div className="[ row ]">
           <div className="[ col-sm-3 ] [ text-center ] [ hotel-icons ]">
             <i className="[ fas fa-dumbbell ] [ hotel-icons--size ]" />
@@ -46,6 +48,30 @@ export default class HotelSpecific extends React.Component {
           </div>
         </div>
         <div className="[ row ]">
+          <div className="[ col-sm-8 ] [ col-centered ]">
+            <img
+              src={hotel.imageUrl}
+              className="[ img-fluid ] [ img--rounded ]"
+            />
+          </div>
+        </div>
+        <div className="[ row ]">
+          <div className="[ col-sm-4 ] [ text-center ]">
+            <p>Price: $ {hotel.price}</p>
+          </div>
+          <div className="[ col-sm-4 ] [ text-center ]">
+            <p>Max Guests: {hotel.maxGuests}</p>
+          </div>
+          <div className="[ col-sm-4 ] [ text-center ]">
+            <p>Self Catering: {hotel.selfCatering}</p>
+          </div>
+        </div>
+        <div className="[ row ]">
+          <div className="[ col-sm-12 ]">
+            <p className="[ text-center ]">google maps</p>
+          </div>
+        </div>
+        <div className="[ row ]">
           <div className="[ col-sm-12 ] [ text-center ]">
             <p>Bildegalleri her</p>
             <CarouselComponent />
@@ -53,7 +79,9 @@ export default class HotelSpecific extends React.Component {
         </div>
         <div className="[ row ]">
           <div className="[ col-sm-12 ] [ text-center ]">
-            <button className="[ btn ]">Make an Enquiry</button>
+            <Link to={`/enquiry`} className="btn">
+              Make An Enquiry
+            </Link>
           </div>
         </div>
         <div className="[ row ] [ split-3 ]">
