@@ -36,7 +36,7 @@ export default class SearchComponent extends React.Component {
 
   renderSearchResults() {
     return (
-      <div>
+      <div className="search__links">
         {this.state.searchResults.map(r => (
           <Link to={`/hotel-specific/${r.id}`} key={`searchresult-${r.id}`}>
             <div>{r.establishmentName}</div>
@@ -64,8 +64,10 @@ export default class SearchComponent extends React.Component {
               ref="searchTerm"
               onChange={this.handleSearch.bind(this)}
             />
+            <div className="[ search__results ]">
+              {this.renderSearchResults()}
+            </div>
           </div>
-          {this.renderSearchResults()}
         </div>
       </div>
     );

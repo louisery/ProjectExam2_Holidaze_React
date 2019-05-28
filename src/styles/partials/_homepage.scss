@@ -28,6 +28,18 @@
     background: linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
     border-radius: 25px;
     padding: 40px;
+
+    &__links a {
+        color: $light-blue;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__results {
+        padding: 10px;
+    }
 }
 
 .img--padding {

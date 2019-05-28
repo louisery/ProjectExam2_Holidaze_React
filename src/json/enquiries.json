@@ -7,10 +7,17 @@
     "checkout": "2019-05-05"
   },
   {
-    "establishment": "Sunset Beach",
+    "establishment": "Summer Hideout",
     "clientName": "Per Andersen",
     "email": "per@hei.no",
     "checkin": "2019-05-09",
     "checkout": "2019-05-12"
+  },
+  {
+    "establishment": "Farm Cottage",
+    "clientName": "Lara Lee",
+    "email": "leelara@aol.com",
+    "checkin": "2019-06-13",
+    "checkout": "2019-06-20"
   }
 ]
