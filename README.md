@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - `cd` into the repo with your terminal
 - Run `npm install`
 - Run `npm start`
-- Open your browser and go to `localhost:8080/`
+- Open your browser and go to [http://localhost:8080/](http://localhost:8080/)
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
