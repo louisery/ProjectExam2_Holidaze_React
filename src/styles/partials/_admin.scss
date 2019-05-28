@@ -14,9 +14,12 @@
         font-size: 20px;
     }
 
-    #hr--msg {
-        border: 1px solid $element-blue;
-        margin-bottom: 40px;
+    .hr--msg {
+        background-color: $element-blue;
+        max-width: 700px;
+        margin: 0px;
+        height: 3px;
+        margin-bottom: 30px;
     }
 }
 

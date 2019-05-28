@@ -12,7 +12,7 @@ export default class MessagesComponent extends React.Component {
                 <h3 className="[ messages__heading ]">{key.clientName}</h3>
                 <p>{key.email}</p>
                 <p>"{key.message}"</p>
-                <hr id="hr--msg" />
+                <hr className="hr--msg" />
               </div>
             );
           })}
