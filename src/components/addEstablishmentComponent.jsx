@@ -7,7 +7,7 @@ export default class EstablishmentComponent extends React.Component {
         <div className="[ col-md-8 ] [ col-centered ] [ establishment ]">
           <form
             method="POST"
-            action="add-establishments-success.php"
+            action="http://192.168.64.2/hotel-booking/server/add-establishments-success.php"
             className="[ establishment__form ]"
           >
             <div className="[ form-group ] [ row ]">

@@ -156,8 +156,8 @@
     "id": "13"
   },
   {
-    "establishmentName": "Innsjø Hus",
-    "establishmentEmail": "enquiries@innsjøhus.no",
+    "establishmentName": "Innsj\u00f8 Hus",
+    "establishmentEmail": "enquiries@innsj\u00f8hus.no",
     "imageUrl": "https://images.unsplash.com/photo-1469394576569-858815b13427?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=849&q=80",
     "price": "200",
     "maxGuests": "8",
@@ -202,5 +202,17 @@
     "description": "With wonderful views of the surrounding area, and a host who is passionate about the area, Buena Vista is a must for those looking for an authentic experience at a reasonable price.",
     "selfCatering": "false",
     "id": "17"
+  },
+  {
+    "establishmentName": "Summer Hideout",
+    "establishmentEmail": "summerhideout@post.com",
+    "imageUrl": "www.summerhideoutimage.com",
+    "price": "60",
+    "maxGuests": "10",
+    "googleLat": "123213435",
+    "googleLong": "346467",
+    "description": "super awesome hideout",
+    "selfCatering": "false",
+    "id": "18"
   }
 ]
