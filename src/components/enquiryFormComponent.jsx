@@ -8,7 +8,7 @@ export default class EnquiryFormComponent extends React.Component {
           <h1>Make an Enquiry</h1>
           <form
             method="POST"
-            action="enquiry-success.php"
+            action="http://192.168.64.2/hotel-booking/server/enquiry-success.php"
             className="[ enquiry__form ]"
           >
             <div className="[ form-group ]">
@@ -17,7 +17,6 @@ export default class EnquiryFormComponent extends React.Component {
                 type="text"
                 name="establishment"
                 id="establishment"
-                value="Bob's B&B"
                 readonly
                 className="[ form-control ]"
               />

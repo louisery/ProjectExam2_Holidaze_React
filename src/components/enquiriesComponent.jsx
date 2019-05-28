@@ -5,10 +5,10 @@ export default class EnquiriesComponent extends React.Component {
   render() {
     return (
       <div className="[ row ]">
-        <div className="[ col-lg-12 col-md-12 col-sm-12 col-xs-12 ]">
+        <div className="[ col-sm-12 ]">
           {EnquiriesData.map((key, value) => {
             return (
-              <div>
+              <div className="[ customer-enquiries ]">
                 <h3>{key.establishment}</h3>
                 <p>
                   <b>Client Name:</b> {key.clientName}
