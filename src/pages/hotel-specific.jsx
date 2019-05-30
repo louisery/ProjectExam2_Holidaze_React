@@ -19,11 +19,21 @@ export default class HotelSpecific extends React.Component {
     return (
       <div>
         <div className="[ row ]">
-          <div className="[ col-sm-12 ]">
+          <div className="[ col-sm-6 ] [ col-centered ]">
             <div className="[ character ]">
               <div className="[ character__info ]">
                 <h1>{hotel.establishmentName}</h1>
-                <p className="[ text-center ]">{hotel.description}</p>
+                <div className="[  ]">
+                  <p>
+                    {hotel.description} Our establishment can have a total of{" "}
+                    {hotel.maxGuests} guests, and one room costs $ {hotel.price}{" "}
+                    per night. If you have any questions, you are welcome to
+                    reach out to us on our email:{" "}
+                    <a href={"mailto:" + hotel.establishmentEmail}>
+                      {hotel.establishmentEmail}.
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -56,17 +66,6 @@ export default class HotelSpecific extends React.Component {
           </div>
         </div>
         <div className="[ row ]">
-          <div className="[ col-sm-4 ] [ text-center ]">
-            <p>Price: $ {hotel.price}</p>
-          </div>
-          <div className="[ col-sm-4 ] [ text-center ]">
-            <p>Max Guests: {hotel.maxGuests}</p>
-          </div>
-          <div className="[ col-sm-4 ] [ text-center ]">
-            <p>Self Catering: {hotel.selfCatering}</p>
-          </div>
-        </div>
-        <div className="[ row ]">
           <div className="[ col-sm-12 ]">
             <p className="[ text-center ]">google maps</p>
           </div>
@@ -74,7 +73,6 @@ export default class HotelSpecific extends React.Component {
         <div className="[ row ]">
           <div className="[ col-sm-12 ] [ text-center ]">
             <p>Bildegalleri her</p>
-            <CarouselComponent />
           </div>
         </div>
         <div className="[ row ]">
