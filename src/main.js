@@ -13,6 +13,7 @@ import Contact from "./components/contactComponent";
 import Hotel from "./pages/hotels";
 import Admin from "./pages/admin";
 import Enquiry from "./pages/enquiry";
+import Success from "./pages/success";
 
 const routes = (
   <HashRouter>
@@ -25,6 +26,7 @@ const routes = (
         <Route exact path="/login" component={Login} />
         <Route exact path="/admin" component={Admin} />
         <Route exact path="/enquiry" component={Enquiry} />
+        <Route exact path="/success" component={Success} />
       </App>
     </Switch>
   </HashRouter>
