@@ -12,7 +12,7 @@ export default class EstablishmentComponent extends React.Component {
           >
             <div className="[ form-group ] [ row ]">
               <div className="[ col-sm-12 ]">
-                <label for="establishmentName">Establishment Name:</label>
+                <label htmlFor="establishmentName">Establishment Name:</label>
                 <input
                   type="text"
                   className="[ form-control ]"
@@ -23,7 +23,7 @@ export default class EstablishmentComponent extends React.Component {
             </div>
             <div className="[ form-group ] [ row ]">
               <div className="[ col-sm-6 ]">
-                <label for="establishmentEmail">Establishment Email:</label>
+                <label htmlFor="establishmentEmail">Establishment Email:</label>
                 <input
                   type="text"
                   className="[ form-control ]"
@@ -32,7 +32,7 @@ export default class EstablishmentComponent extends React.Component {
                 />
               </div>
               <div className="[ col-sm-6 ]">
-                <label for="imageUrl">Image URL:</label>
+                <label htmlFor="imageUrl">Image URL:</label>
                 <input
                   type="text"
                   className="[ form-control ]"
@@ -44,7 +44,7 @@ export default class EstablishmentComponent extends React.Component {
 
             <div className="[ form-group ] [ row ]">
               <div className="[ col-sm-6 ]">
-                <label for="price">Price per person per night ($):</label>
+                <label htmlFor="price">Price per person per night ($):</label>
                 <input
                   type="number"
                   className="[ form-control ]"
@@ -53,7 +53,7 @@ export default class EstablishmentComponent extends React.Component {
                 />
               </div>
               <div className="[ col-sm-6 ]">
-                <label for="maxGuests">Max guests:</label>
+                <label htmlFor="maxGuests">Max guests:</label>
                 <input
                   type="number"
                   className="[ form-control ]"
@@ -65,7 +65,7 @@ export default class EstablishmentComponent extends React.Component {
 
             <div className="[ form-group ] [ row ]">
               <div className="[ col-sm-6 ]">
-                <label for="googleLat">Google Coordinates Latitude:</label>
+                <label htmlFor="googleLat">Google Coordinates Latitude:</label>
                 <input
                   type="text"
                   className="[ form-control ]"
@@ -75,7 +75,9 @@ export default class EstablishmentComponent extends React.Component {
               </div>
 
               <div className="[ col-sm-6 ]">
-                <label for="googleLong">Google Coordinates Longitude:</label>
+                <label htmlFor="googleLong">
+                  Google Coordinates Longitude:
+                </label>
                 <input
                   type="text"
                   className="[ form-control ]"
@@ -87,7 +89,7 @@ export default class EstablishmentComponent extends React.Component {
 
             <div className="[ form-group ] [ row ]">
               <div className="[ col-sm-12 ]">
-                <label for="description">Description:</label>
+                <label htmlFor="description">Description:</label>
                 <input
                   type="text"
                   className="[ form-control ]"
@@ -99,7 +101,7 @@ export default class EstablishmentComponent extends React.Component {
 
             <div className="[ form-group ] [ row ]">
               <div className="[ col-sm-6 ]">
-                <label for="id">ID:</label>
+                <label htmlFor="id">ID:</label>
                 <input
                   type="number"
                   className="[ form-control ]"
@@ -109,7 +111,7 @@ export default class EstablishmentComponent extends React.Component {
               </div>
 
               <div className="[ col-sm-6 ]">
-                <label for="selfCatering">Self-catering:</label>
+                <label htmlFor="selfCatering">Self-catering:</label>
                 <br />
                 <div className="[ form-check form-check-inline ]">
                   <input
@@ -119,7 +121,7 @@ export default class EstablishmentComponent extends React.Component {
                     name="selfCatering"
                     value="true"
                   />
-                  <label for="true" className="[ form-check-label ]">
+                  <label htmlFor="true" className="[ form-check-label ]">
                     True
                   </label>
                 </div>
@@ -131,7 +133,7 @@ export default class EstablishmentComponent extends React.Component {
                     name="selfCatering"
                     value="false"
                   />
-                  <label for="false" className="[ form-check-label ]">
+                  <label htmlFor="false" className="[ form-check-label ]">
                     False
                   </label>
                 </div>

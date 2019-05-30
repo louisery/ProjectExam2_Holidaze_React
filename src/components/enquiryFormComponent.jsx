@@ -54,7 +54,7 @@ export default class EnquiryFormComponent extends React.Component {
             className="[ enquiry__form ]"
           >
             <div className="[ form-group ]">
-              <label for="establishment">Establishment:</label>
+              <label htmlFor="establishment">Establishment:</label>
               <input
                 type="text"
                 name="establishment"
@@ -69,7 +69,7 @@ export default class EnquiryFormComponent extends React.Component {
             </div>
             <div className="[ form-group ] [ row ]">
               <div className="[ col-sm-6 ]">
-                <label for="clientName">Full name:</label>
+                <label htmlFor="clientName">Full name:</label>
                 <input
                   type="text"
                   name="clientName"
@@ -78,18 +78,19 @@ export default class EnquiryFormComponent extends React.Component {
                 />
               </div>
               <div className="[ col-sm-6 ]">
-                <label for="email">Email Address:</label>
+                <label htmlFor="email">Email Address:</label>
                 <input
                   type="text"
                   name="email"
                   id="email"
+                  ß
                   className="[ form-control ]"
                 />
               </div>
             </div>
             <div className="[ form-group ] [ row ]">
               <div className="[ col-sm-6 ]">
-                <label for="checkin">Check-in:</label>
+                <label htmlFor="checkin">Check-in:</label>
                 <input
                   type="date"
                   name="checkin"
@@ -98,9 +99,9 @@ export default class EnquiryFormComponent extends React.Component {
                 />
               </div>
               <div className="[ col-sm-6 ]">
-                <label for="checkout">Check-out:</label>
+                <label htmlFor="checkout">Check-out:</label>
                 <input
-                  type="date"
+                  type="dateß"
                   name="checkout"
                   id="checkout"
                   className="[ form-control ]"
