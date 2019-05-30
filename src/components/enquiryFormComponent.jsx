@@ -1,49 +1,53 @@
 import React from "react";
 import EstablishmentsData from "../json/establishments.json";
 
+const emailRegex = RegExp(
+  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+);
+
 export default class EnquiryFormComponent extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      searchWord: "",
-      searchResults: []
+      establishment: "",
+      clientName: "",
+      email: "",
+      formErrors: {
+        establishment: "",
+        clientName: "",
+        email: ""
+      }
     };
   }
 
-  handleSearch(event) {
-    let searchWord = event.target.value;
+  handleChange = e => {
+    e.preventDefault();
+    const { name, value } = e.target;
+    let formErrors = { ...this.state.formErrors };
 
-    let searchHits = EstablishmentsData.filter(
-      est =>
-        est.establishmentName.toLowerCase().indexOf(searchWord.toLowerCase()) >=
-        0
-    );
-
-    if (searchWord.length > 0) {
-      this.setState({
-        searchWord: searchWord,
-        searchResults: searchHits
-      });
-    } else {
-      this.setState({
-        searchWord: searchWord,
-        searchResults: []
-      });
+    switch (name) {
+      case "establishment":
+        formErrors.establishment =
+          value.length < 2 ? "Minimum 2 characters required" : "";
+        break;
+      case "clientName":
+        formErrors.clientName =
+          value.length < 2 ? "You must write a clientName" : "";
+        break;
+      case "email":
+        formErrors.email = emailRegex.test(value)
+          ? ""
+          : "Invalid email address";
+        break;
     }
-  }
 
-  renderSearchResults() {
-    return (
-      <div>
-        {this.state.searchResults.map(r => (
-          <div>{r.establishmentName}</div>
-        ))}
-      </div>
-    );
-  }
+    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+  };
 
   render() {
+    const { formErrors } = this.state;
+
     return (
       <div className="[ row ] ">
         <div className="[ col-lg-8 col-md-8 col-sm-8 col-xs-12 ] [ col-centered ]">
@@ -52,20 +56,23 @@ export default class EnquiryFormComponent extends React.Component {
             method="POST"
             action="http://192.168.64.2/hotel-booking/server/enquiry-success.php"
             className="[ enquiry__form ]"
+            name="vform"
           >
             <div className="[ form-group ]">
               <label htmlFor="establishment">Establishment:</label>
-              <input
-                type="text"
+              <select
+                className="[ form-control ]"
                 name="establishment"
                 id="establishment"
-                readonly
-                className="[ form-control ]"
-                onChange={this.handleSearch.bind(this)}
-              />
-              <div className="search-sug">
-                <p>Suggestion: {this.renderSearchResults()}</p>
-              </div>
+              >
+                {EstablishmentsData.map(item => {
+                  return (
+                    <option value={item.establishmentName}>
+                      {item.establishmentName}
+                    </option>
+                  );
+                })}
+              </select>
             </div>
             <div className="[ form-group ] [ row ]">
               <div className="[ col-sm-6 ]">
@@ -74,8 +81,19 @@ export default class EnquiryFormComponent extends React.Component {
                   type="text"
                   name="clientName"
                   id="clientName"
-                  className="[ form-control ]"
+                  className={`[ form-control ] [ ${
+                    formErrors.clientName.length > 0 ? "form-invalid" : ""
+                  } ]`}
+                  noValidate
+                  onChange={this.handleChange}
+                  aria-required="true"
+                  required
                 />
+                {formErrors.clientName.length > 0 && (
+                  <span className="[ form__error ]">
+                    <i>{formErrors.clientName}</i>
+                  </span>
+                )}
               </div>
               <div className="[ col-sm-6 ]">
                 <label htmlFor="email">Email Address:</label>
@@ -83,9 +101,19 @@ export default class EnquiryFormComponent extends React.Component {
                   type="text"
                   name="email"
                   id="email"
-                  ß
-                  className="[ form-control ]"
+                  className={`[ form-control ] [ ${
+                    formErrors.email.length > 0 ? "form-invalid" : ""
+                  } ]`}
+                  noValidate
+                  onChange={this.handleChange}
+                  aria-required="true"
+                  required
                 />
+                {formErrors.email.length > 0 && (
+                  <span className="[ form__error ]">
+                    <i>{formErrors.email}</i>
+                  </span>
+                )}
               </div>
             </div>
             <div className="[ form-group ] [ row ]">
@@ -96,15 +124,17 @@ export default class EnquiryFormComponent extends React.Component {
                   name="checkin"
                   id="checkin"
                   className="[ form-control ]"
+                  required
                 />
               </div>
               <div className="[ col-sm-6 ]">
                 <label htmlFor="checkout">Check-out:</label>
                 <input
-                  type="dateß"
+                  type="date"
                   name="checkout"
                   id="checkout"
                   className="[ form-control ]"
+                  required
                 />
               </div>
             </div>
