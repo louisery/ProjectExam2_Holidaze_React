@@ -1,16 +1,7 @@
 import React from "react";
 import SearchComponent from "../components/searchComponent";
 
-// import Search from "./../components/searchComponent";
-
 export default class Homepage extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-
-  //   }
-  // }
-
   render() {
     return (
       <div>

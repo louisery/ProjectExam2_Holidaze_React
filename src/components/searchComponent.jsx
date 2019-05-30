@@ -36,7 +36,7 @@ export default class SearchComponent extends React.Component {
 
   renderSearchResults() {
     return (
-      <div className="search__links">
+      <div className="[ search__links ]">
         {this.state.searchResults.map(r => (
           <Link to={`/hotel-specific/${r.id}`} key={`searchresult-${r.id}`}>
             <div>{r.establishmentName}</div>
