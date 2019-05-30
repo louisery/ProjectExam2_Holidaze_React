@@ -4,19 +4,19 @@ const emailRegex = RegExp(
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 );
 
-const formValidate = ({ formErrors, ...rest }) => {
-  let valid = true;
+// const formValidate = ({ formErrors, ...rest }) => {
+//   let valid = true;
 
-  Object.values(formErrors).forEach(val => {
-    val.length > 0 && (valid = false);
-  });
+//   Object.values(formErrors).forEach(val => {
+//     val.length > 0 && (valid = false);
+//   });
 
-  Object.values(rest).forEach(val => {
-    val === "" && (valid = false);
-  });
+//   Object.values(rest).forEach(val => {
+//     val === "" && (valid = false);
+//   });
 
-  return valid;
-};
+//   return valid;
+// };
 
 export default class ContactComponent extends React.Component {
   constructor(props) {
@@ -84,6 +84,7 @@ export default class ContactComponent extends React.Component {
                 noValidate
                 onChange={this.handleChange}
                 aria-required="true"
+                required
               />
               {formErrors.clientName.length > 0 && (
                 <span className="[ form__error ]">
@@ -103,6 +104,7 @@ export default class ContactComponent extends React.Component {
                 noValidate
                 onChange={this.handleChange}
                 aria-required="true"
+                required
               />
               {formErrors.email.length > 0 && (
                 <span className="[ form__error ]">
@@ -123,6 +125,7 @@ export default class ContactComponent extends React.Component {
                 noValidate
                 onChange={this.handleChange}
                 aria-required="true"
+                required
               />
               {formErrors.message.length > 0 && (
                 <span className="[ form__error ]">
