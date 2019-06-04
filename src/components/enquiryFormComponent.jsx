@@ -1,5 +1,6 @@
 import React from "react";
 import EstablishmentsData from "../json/establishments.json";
+import $ from "jquery";
 
 const emailRegex = RegExp(
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -56,7 +57,6 @@ export default class EnquiryFormComponent extends React.Component {
             method="POST"
             action="http://192.168.64.2/hotel-booking/server/enquiry-success.php"
             className="[ enquiry__form ]"
-            name="vform"
           >
             <div className="[ form-group ]">
               <label htmlFor="establishment">Establishment:</label>
