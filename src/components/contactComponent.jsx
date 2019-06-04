@@ -4,19 +4,19 @@ const emailRegex = RegExp(
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 );
 
-// const formValidate = ({ formErrors, ...rest }) => {
-//   let valid = true;
+const validateForm = ({ formErrors, ...rest }) => {
+  let valid = true;
 
-//   Object.values(formErrors).forEach(val => {
-//     val.length > 0 && (valid = false);
-//   });
+  Object.values(formErrors).forEach(value => {
+    value.length > 0 && (valid = false);
+  });
 
-//   Object.values(rest).forEach(val => {
-//     val === "" && (valid = false);
-//   });
+  Object.values(rest).forEach(val => {
+    value === "" && (valid = false);
+  });
 
-//   return valid;
-// };
+  return valid;
+};
 
 export default class ContactComponent extends React.Component {
   constructor(props) {
@@ -33,6 +33,14 @@ export default class ContactComponent extends React.Component {
       }
     };
   }
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    if (validateForm(this.state)) {
+      window.location.replace("/#/success");
+    }
+  };
 
   handleChange = e => {
     e.preventDefault();
@@ -71,6 +79,7 @@ export default class ContactComponent extends React.Component {
             method="POST"
             action="http://192.168.64.2/hotel-booking/server/contact-success.php"
             className="[ contact__form ]"
+            onSubmit={this.handleSubmit}
           >
             <div className="[ form-group ]">
               <label htmlFor="clientName">Full Name:</label>
