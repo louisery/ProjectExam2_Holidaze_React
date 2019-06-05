@@ -74,3 +74,12 @@
         color: $light-blue;
     }
 }
+
+.hotel-info__split-bg {
+    background: -webkit-linear-gradient(130deg, $dark-blue 70%, $element-blue 40%);
+    background: -o-linear-gradient(130deg, $dark-blue 70%, $element-blue 40%);
+    background: -moz-linear-gradient(130deg, $dark-blue 70%, $element-blue 40%);
+    background: linear-gradient(130deg, $dark-blue 70%, $element-blue 40%);
+    padding: 60px;
+    margin-bottom: 40px;
+}

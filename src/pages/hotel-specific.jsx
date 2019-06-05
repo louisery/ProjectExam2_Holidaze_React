@@ -84,7 +84,7 @@ export default class HotelSpecific extends React.Component {
             </Link>
           </div>
         </div>
-        <div className="[ row ] [ split-3 ]">
+        <div className="[ row ] [ hotel-info__split-bg ]">
           <div className="[ col-sm-6 ]">
             <h3>Facilities</h3>
             <ul>
