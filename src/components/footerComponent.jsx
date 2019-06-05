@@ -7,10 +7,10 @@ export default class FooterComponent extends React.Component {
         <footer className="[ footer py-4 ]">
           <div className="[ container ]">
             <div className="[ row ]">
-              <div className="[ col-md-3 ]">
+              <div className="[ col-md-3 col-xs-12 text-center ]">
                 <div className="[ footer__text ]">
-                  <p className="[ footer__text--logo ]">Holidaze</p>
-                  <p className="[ footer__text--copyright ]">
+                  <p className="[ footer__logo--placing ]">Holidaze</p>
+                  <p className="[ footer__copyright--placing ]">
                     Copyright &copy; 2019
                   </p>
                 </div>

@@ -4,11 +4,15 @@
 
     &__text {
         padding-top: 30px;
+        text-align: left;
+        margin: 0 auto;
+    }
 
-        &--logo {
-            font-family: $logo-font;
-            font-size: 20px;
-        }
+    &__logo--placing {
+        font-family: $logo-font;
+        font-size: 20px;
+        text-align: left;
+        margin: 0 auto;
     }
 
     &__social {
@@ -26,4 +30,15 @@
     }
 }
 
-// footer text midtstilt small screens
+// footer text align center on small screens
+@media (max-width: 800px) {
+    .footer {
+        &__logo--placing {
+            text-align: center;
+        }
+
+        &__copyright--placing {
+            text-align: center;
+        }
+    }
+}
