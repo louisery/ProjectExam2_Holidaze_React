@@ -1,0 +1,14 @@
+.success {
+    p {
+        font-size: 30px;
+    }
+
+    &__icon--color {
+        color: lawngreen;
+        font-size: 80px;
+    }
+
+    &__btn {
+        margin: 50px;
+    }
+}
