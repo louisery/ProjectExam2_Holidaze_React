@@ -26,20 +26,26 @@ export default class NavbarComponent extends React.Component {
         <div className="[ collapse navbar-collapse ]" id="navbar-content">
           <ul className="[ navbar-nav ml-auto ]">
             <li className="[ nav-item ] [ navbar__link ]">
-              <NavLink to="/#/home">Home</NavLink>
+              <NavLink to="/#/home" className="[ navbar__link--hover ]">
+                Home
+              </NavLink>
             </li>
 
             <li className="[ nav-item ] [ navbar__link ]">
-              <NavLink to="/hotels">Hotels</NavLink>
+              <NavLink to="/hotels" className="[ navbar__link--hover ]">
+                Hotels
+              </NavLink>
             </li>
 
             <li className="[ nav-item ] [ navbar__link ]">
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/contact" className="[ navbar__link--hover ]">
+                Contact
+              </NavLink>
             </li>
 
             <li className="[ nav-item ] [ navbar__link ]">
-              <NavLink to="/login">
-                <i class="far fa-user" />
+              <NavLink to="/login" className="[ navbar__link--hover ]">
+                <i className="[ far fa-user ] [ navbar__link--border-length ]" />
               </NavLink>
             </li>
           </ul>

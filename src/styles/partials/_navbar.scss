@@ -6,17 +6,25 @@
         color: white;
     }
 
-    &__link a {
+    &__link {
         color: $light-blue;
         font-family: $button-font;
         text-transform: uppercase;
         padding-left: 15px;
         padding-right: 15px;
-
-        &:hover {
-            color: white;
-            border-bottom: 3px solid $light-blue;
-            text-decoration: none;
-        }
     }
+
+    &__link--hover:hover {
+        color: white;
+        border-bottom: 3px solid $light-blue;
+        text-decoration: none;
+    }
+
+    // longer border-bottom
+    &__link--border-length {
+        padding: 0px 10px 0px 10px;
+    }
+    
 }
+
+
