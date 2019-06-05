@@ -1,58 +1,68 @@
-.split-1 {
-    background: -webkit-linear-gradient(80deg, $dark-blue 45%, $element-blue 45%);
-    background: -o-linear-gradient(80deg, $dark-blue 45%, $element-blue 45%);
-    background: -moz-linear-gradient(80deg, $dark-blue 45%, $element-blue 45%);
-    background: linear-gradient(80deg, $dark-blue 45%, $element-blue 45%);
-    padding: 40px 30px 40px 30px;
-    margin-bottom: 40px;
-}
-
-.split-1:nth-child(odd) {
-    background: -webkit-linear-gradient(100deg, $element-blue 45%, $dark-blue 45%);
-    background: -o-linear-gradient(100deg, $element-blue 45%, $dark-blue 45%);
-    background: -moz-linear-gradient(100deg, $element-blue 45%, $dark-blue 45%);
-    background: linear-gradient(100deg, $element-blue 45%, $dark-blue 45%);
-}
-
-.img--size {
-    width: auto;
-    height: 200px;
-}
-
 .hotels {
+    &__split-bg {
+        background: -webkit-linear-gradient(80deg, $dark-blue 45%, $element-blue 45%);
+        background: -o-linear-gradient(80deg, $dark-blue 45%, $element-blue 45%);
+        background: -moz-linear-gradient(80deg, $dark-blue 45%, $element-blue 45%);
+        background: linear-gradient(80deg, $dark-blue 45%, $element-blue 45%);
+        padding: 40px 30px 40px 30px;
+        margin-bottom: 40px;
+    }
+
+    &__split-bg:nth-child(odd) {
+        background: -webkit-linear-gradient(100deg, $element-blue 45%, $dark-blue 45%);
+        background: -o-linear-gradient(100deg, $element-blue 45%, $dark-blue 45%);
+        background: -moz-linear-gradient(100deg, $element-blue 45%, $dark-blue 45%);
+        background: linear-gradient(100deg, $element-blue 45%, $dark-blue 45%);
+    }
+
     &__heading {
         padding-top: 20px;
         text-align: left;
     }
 
-    #hotels__description {
+    &__hr--size {
+        background-color: white;
+        max-width: 100px;
+        margin: 0px;
+        height: 2px;
+        margin-top: -30px;
+        margin-bottom: 20px;
+    }
+
+    &__text--center {
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    &__img--size {
+        width: auto;
+        height: 200px;
+    }
+
+    &__description {
         width: 300px;
         padding-bottom: 30px;
     }
 }
 
-.hr--heading {
-    background-color: white;
-    max-width: 100px;
-    margin: 0px;
-    height: 2px;
-    margin-top: -30px;
-    margin-bottom: 20px;
-}
-
-.hotels--center {
-    width: 300px;
-    height: auto;
-    margin: 0 auto;
-}
-
 // no split on small screens
 @media (max-width: 800px) {
-    .split-1 {
-        background: $dark-blue;
-    }
+    .hotels {
+        &__split-bg {
+            background: $dark-blue;
+        }
 
-    .split-1:nth-child(odd) {
-        background: $dark-blue;
+        &__split-bg:nth-child(odd) {
+            background: $dark-blue;
+        }
+    }
+}
+
+// Hotel Specific Page
+.hotel-icons {
+    &--size {
+        font-size: 30px;
+        padding-bottom: 10px;
     }
 }

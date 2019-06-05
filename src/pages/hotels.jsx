@@ -33,16 +33,16 @@ const Hotels = props => {
     <div className="[ col-sm-6 ] [ text-center ]">
       <img
         src={props.imageUrl}
-        className="[ img-fluid ] [ img--size ] [ img--rounded ]"
+        className="[ img-fluid ] [ hotels__img--size ] [ img--rounded ]"
       />
     </div>
   );
   let textHalf = props => (
     <div className="[ col-sm-6 ]">
-      <div className="[ hotels--center ]">
+      <div className="[ hotels__text--center ]">
         <h2 className="[ hotels__heading ]">{props.establishmentName}</h2>
-        <hr className="[ hr--heading ]" />
-        <p id="hotels__description">
+        <hr className="[ hotels__hr--size ]" />
+        <p className="hotels__description">
           <b>Description:</b> {props.description}
         </p>
         <Link to={`/hotel-specific/${props.id}`} className="btn">
@@ -54,14 +54,14 @@ const Hotels = props => {
 
   if (mirrored) {
     return (
-      <div className="[ row ] [ split-1 ] [ hotels ]">
+      <div className="[ row ] [ hotels__split-bg ]">
         {imageHalf(props)}
         {textHalf(props)}
       </div>
     );
   } else {
     return (
-      <div className="[ row ] [ split-1 ] [ hotels ]">
+      <div className="[ row ] [ hotels__split-bg ]">
         {textHalf(props)}
         {imageHalf(props)}
       </div>
