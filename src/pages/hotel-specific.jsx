@@ -1,5 +1,4 @@
 import React from "react";
-import CarouselComponent from "../components/carouselComponent";
 import EstablishmentData from "../json/establishments.json";
 import { Link } from "react-router-dom";
 
@@ -67,12 +66,12 @@ export default class HotelSpecific extends React.Component {
         </div>
         <div className="[ row ]">
           <div className="[ col-sm-12 ]">
-            <p className="[ text-center ]">google maps</p>
+            <p className="[ text-center ]">google maps location</p>
           </div>
         </div>
         <div className="[ row ]">
-          <div className="[ col-sm-12 ] [ text-center ]">
-            <p>Bildegalleri her</p>
+          <div className="[ col-sm-12 ]">
+            <p className="[ text-center ]">self catering</p>
           </div>
         </div>
         <div className="[ row ]">
