@@ -28,7 +28,10 @@ export default class HotelSpecific extends React.Component {
                     {hotel.maxGuests} guests, and one room costs $ {hotel.price}{" "}
                     per night. If you have any questions, you are welcome to
                     reach out to us on our email:{" "}
-                    <a href={"mailto:" + hotel.establishmentEmail}>
+                    <a
+                      className="[ hotel__email--color ]"
+                      href={"mailto:" + hotel.establishmentEmail}
+                    >
                       {hotel.establishmentEmail}.
                     </a>
                   </p>
