@@ -1,22 +1,8 @@
 import React from "react";
 
-const emailRegex = RegExp(
-  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-);
-
-const validateForm = ({ formErrors, ...rest }) => {
-  let valid = true;
-
-  Object.values(formErrors).forEach(value => {
-    value.length > 0 && (valid = false);
-  });
-
-  Object.values(rest).forEach(val => {
-    value === "" && (valid = false);
-  });
-
-  return valid;
-};
+// const emailRegex = RegExp(
+//   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+// );
 
 export default class ContactComponent extends React.Component {
   constructor(props) {
@@ -26,48 +12,22 @@ export default class ContactComponent extends React.Component {
       clientName: "",
       email: "",
       message: "",
-      formErrors: {
-        clientName: "",
-        email: "",
-        message: ""
-      }
+      touched: false
     };
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
-
-    if (validateForm(this.state)) {
-      window.location.replace("/#/success");
-    }
+  handleChange = event => {
+    this.setState({ [event.target.clientName]: event.target.value });
+    this.setState({ [event.target.email]: event.target.value });
+    this.setState({ [event.target.message]: event.target.value });
   };
 
-  handleChange = e => {
-    e.preventDefault();
-    const { name, value } = e.target;
-    let formErrors = { ...this.state.formErrors };
-
-    switch (name) {
-      case "clientName":
-        formErrors.clientName =
-          value.length < 2 ? "Minimum 2 characters required" : "";
-        break;
-      case "message":
-        formErrors.message =
-          value.length < 10 ? "You must write a message" : "";
-        break;
-      case "email":
-        formErrors.email = emailRegex.test(value)
-          ? ""
-          : "Invalid email address";
-        break;
-    }
-
-    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+  handleBlur = event => {
+    this.setState({ touched: true });
   };
 
   render() {
-    const { formErrors } = this.state;
+    const { clientName, email, message, touched } = this.state;
     return (
       <div className="[ row ]">
         <div className="[ col-lg-12 col-md-12 col-sm-12 col-xs-12 ] [ text-center ] [ contact ]">
@@ -79,7 +39,6 @@ export default class ContactComponent extends React.Component {
             method="POST"
             action="http://192.168.64.2/hotel-booking/server/contact-success.php"
             className="[ contact__form ]"
-            onSubmit={this.handleSubmit}
           >
             <div className="[ form-group ]">
               <label htmlFor="clientName">Full Name:</label>
@@ -87,19 +46,14 @@ export default class ContactComponent extends React.Component {
                 type="text"
                 name="clientName"
                 id="clientName"
-                className={`[ form-control ] [ ${
-                  formErrors.clientName.length > 0 ? "form-invalid" : ""
-                } ]`}
+                className="[ form-control ]"
                 noValidate
                 onChange={this.handleChange}
+                onBlur={this.handleBlur}
                 aria-required="true"
                 required
               />
-              {formErrors.clientName.length > 0 && (
-                <span className="[ form__error ]">
-                  <i>{formErrors.clientName}</i>
-                </span>
-              )}
+              {touched && clientName === "" && "Name is required"}
             </div>
             <div className="[ form-group ]">
               <label htmlFor="email">Email Address:</label>
@@ -107,19 +61,14 @@ export default class ContactComponent extends React.Component {
                 type="text"
                 name="email"
                 id="email"
-                className={`[ form-control ] [ ${
-                  formErrors.email.length > 0 ? "form-invalid" : ""
-                } ]`}
+                className="[ form-control ]"
                 noValidate
                 onChange={this.handleChange}
+                onBlur={this.handleBlur}
                 aria-required="true"
                 required
               />
-              {formErrors.email.length > 0 && (
-                <span className="[ form__error ]">
-                  <i>{formErrors.email}</i>
-                </span>
-              )}
+              {touched && email === "" && "Email is required"}
             </div>
             <div className="[ form-group ]">
               <label htmlFor="message">Message:</label>
@@ -128,21 +77,16 @@ export default class ContactComponent extends React.Component {
                 id="message"
                 rows="8"
                 cols="80"
-                className={`[ form-control ] [ ${
-                  formErrors.message.length > 0 ? "form-invalid" : ""
-                } ]`}
+                className="[ form-control ]"
                 noValidate
                 onChange={this.handleChange}
+                onBlur={this.handleBlur}
                 aria-required="true"
                 required
               />
-              {formErrors.message.length > 0 && (
-                <span className="[ form__error ]">
-                  <i>{formErrors.message}</i>
-                </span>
-              )}
+              {touched && message === "" && "Message is required"}
             </div>
-            <input type="submit" className="[ btn ]" />
+            <input type="submit" className="[ btn ] [ btn--expand ]" />
           </form>
         </div>
       </div>

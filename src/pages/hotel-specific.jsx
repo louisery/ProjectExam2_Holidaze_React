@@ -79,7 +79,7 @@ export default class HotelSpecific extends React.Component {
         </div>
         <div className="[ row ]">
           <div className="[ col-sm-12 ] [ text-center ]">
-            <Link to={`/enquiry`} className="btn">
+            <Link to={`/enquiry`} className="[ btn ] [ btn--expand ]">
               Make An Enquiry
             </Link>
           </div>

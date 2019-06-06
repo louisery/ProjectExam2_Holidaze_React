@@ -30,10 +30,10 @@ export default class Hotel extends React.Component {
 const Hotels = props => {
   let { mirrored } = props;
   let imageHalf = props => (
-    <div className="[ col-sm-6 ] [ text-center ]">
+    <div className="[ col-sm-6 ]">
       <img
         src={props.imageUrl}
-        className="[ img-fluid ] [ hotels__img--size ] [ img--rounded ]"
+        className="[ img-fluid d-none d-sm-block ] [ hotels__img--size ] [ img--rounded ]"
       />
     </div>
   );
@@ -45,7 +45,10 @@ const Hotels = props => {
         <p className="hotels__description">
           <b>Description:</b> {props.description}
         </p>
-        <Link to={`/hotel-specific/${props.id}`} className="btn">
+        <Link
+          to={`/hotel-specific/${props.id}`}
+          className="[ btn ] [ btn--expand ]"
+        >
           Book Hotel
         </Link>
       </div>

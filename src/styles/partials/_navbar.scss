@@ -12,19 +12,11 @@
         text-transform: uppercase;
         padding-left: 15px;
         padding-right: 15px;
-    }
 
-    &__link--hover:hover {
-        color: white;
-        border-bottom: 3px solid $light-blue;
-        text-decoration: none;
+        &:hover {
+            color: white;
+            border-bottom: 3px solid $light-blue;
+            text-decoration: none;
+        }
     }
-
-    // longer border-bottom
-    &__link--border-length {
-        padding: 0px 10px 0px 10px;
-    }
-    
 }
-
-

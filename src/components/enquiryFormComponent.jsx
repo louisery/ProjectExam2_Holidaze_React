@@ -1,10 +1,23 @@
 import React from "react";
 import EstablishmentsData from "../json/establishments.json";
-import $ from "jquery";
 
 const emailRegex = RegExp(
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 );
+
+const validateForm = ({ formErrors, ...rest }) => {
+  let valid = true;
+
+  Object.values(formErrors).forEach(value => {
+    value.length > 0 && (valid = false);
+  });
+
+  Object.values(rest).forEach(val => {
+    value === "" && (valid = false);
+  });
+
+  return valid;
+};
 
 export default class EnquiryFormComponent extends React.Component {
   constructor(props) {
@@ -21,6 +34,14 @@ export default class EnquiryFormComponent extends React.Component {
       }
     };
   }
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    if (validateForm(this.state)) {
+      window.location.replace("/#/success");
+    }
+  };
 
   handleChange = e => {
     e.preventDefault();
@@ -57,6 +78,7 @@ export default class EnquiryFormComponent extends React.Component {
             method="POST"
             action="http://192.168.64.2/hotel-booking/server/enquiry-success.php"
             className="[ enquiry__form ]"
+            onSubmit={this.handleSubmit}
           >
             <div className="[ form-group ]">
               <label htmlFor="establishment">Establishment:</label>
@@ -138,7 +160,7 @@ export default class EnquiryFormComponent extends React.Component {
                 />
               </div>
             </div>
-            <input type="submit" className="[ btn ]" />
+            <input type="submit" className="[ btn ] [ btn--expand ]" />
           </form>
         </div>
       </div>

@@ -57,7 +57,7 @@ export default class LoginComponent extends React.Component {
               <div className="[ text-center ]">
                 <button
                   type="submit"
-                  class="[ btn ] [ login__button ]"
+                  class="[ btn ] [ btn--expand ] [ login__button ]"
                   onClick={app.handleLogin}
                 >
                   Submit <i class="far fa-paper-plane" />

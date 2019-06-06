@@ -11,7 +11,10 @@ export default class Success extends React.Component {
             <i className="[ fas fa-check ] [ success__icon--color ]" />
           </div>
           <div className="[ text-center ]">
-            <a href="/home" className="[ btn ] [ success__btn ]">
+            <a
+              href="/home"
+              className="[ btn ] [ btn--expand ] [ success__btn ]"
+            >
               Back to Homepage
             </a>
           </div>

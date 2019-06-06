@@ -337,7 +337,7 @@ export default class EstablishmentComponent extends React.Component {
               </div>
             </div>
 
-            <input type="submit" className="[ btn ]" />
+            <input type="submit" className="[ btn ] [ btn--expand ]" />
           </form>
         </div>
       </div>
