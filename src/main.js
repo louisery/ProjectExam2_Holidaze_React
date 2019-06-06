@@ -14,6 +14,7 @@ import Hotel from "./pages/hotels";
 import Admin from "./pages/admin";
 import Enquiry from "./pages/enquiry";
 import Success from "./pages/success";
+import City from "./pages/city";
 
 const routes = (
   <HashRouter>
@@ -27,6 +28,7 @@ const routes = (
         <Route exact path="/admin" component={Admin} />
         <Route exact path="/enquiry" component={Enquiry} />
         <Route exact path="/success" component={Success} />
+        <Route exact path="/city" component={City} />
       </App>
     </Switch>
   </HashRouter>
