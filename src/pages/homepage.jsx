@@ -21,7 +21,7 @@ export default class Homepage extends React.Component {
 
         <div className="[ row ] [ icons ]">
           <div className="[ col-sm-3 col-md-3 col-sm-3 col-xs-12 ] [ text-center ]">
-            <a href="">
+            <a href="/#/city">
               <img
                 src="https://img.icons8.com/ios/50/57c4f0/city.png"
                 className="[ img-fluid ] [ icons--opacity ]"
