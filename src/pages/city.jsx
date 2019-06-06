@@ -50,3 +50,7 @@ export default class City extends React.Component {
     );
   }
 }
+
+/**
+ * Photo by Michael Fousert from unsplash
+ */
