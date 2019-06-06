@@ -12,6 +12,10 @@ export default class HotelSpecific extends React.Component {
     };
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     let hotel = this.state.establishmentObj;
 
