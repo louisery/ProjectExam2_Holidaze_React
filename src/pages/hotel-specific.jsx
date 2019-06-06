@@ -22,7 +22,7 @@ export default class HotelSpecific extends React.Component {
             <div className="[ character ]">
               <div className="[ character__info ]">
                 <h1>{hotel.establishmentName}</h1>
-                <div className="[  ]">
+                <div>
                   <p>
                     {hotel.description} Our establishment can have a total of{" "}
                     {hotel.maxGuests} guests, and one room costs $ {hotel.price}{" "}
