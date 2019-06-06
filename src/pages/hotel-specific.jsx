@@ -18,6 +18,10 @@ export default class HotelSpecific extends React.Component {
 
   render() {
     let hotel = this.state.establishmentObj;
+    let catering =
+      hotel.selfCatering === "true"
+        ? "We offer self catering."
+        : "We do not offer self catering.";
 
     return (
       <div>
@@ -27,10 +31,11 @@ export default class HotelSpecific extends React.Component {
               <div className="[ character__info ]">
                 <h1>{hotel.establishmentName}</h1>
                 <div>
+                  <p>{hotel.description}</p>
                   <p>
-                    {hotel.description} Our establishment can have a total of{" "}
-                    {hotel.maxGuests} guests, and one room costs $ {hotel.price}{" "}
-                    per night. If you have any questions, you are welcome to
+                    Our establishment can have a total of {hotel.maxGuests}{" "}
+                    guests, and one room costs $ {hotel.price} per night.{" "}
+                    {catering} If you have any questions, you are welcome to
                     reach out to us on our email:{" "}
                     <a
                       className="[ hotel__email--color ]"
@@ -47,12 +52,12 @@ export default class HotelSpecific extends React.Component {
 
         <div className="[ row ]">
           <div className="[ col-sm-3 ] [ text-center ] [ hotel-icons ]">
-            <i className="[ fas fa-dumbbell ] [ hotel-icons--size ]" />
-            <p>Gym</p>
+            <i className="[ fas fa-car ] [ hotel-icons--size ]" />
+            <p>Parking</p>
           </div>
           <div className="[ col-sm-3 ] [ text-center ]">
-            <i className="[ fas fa-utensils ] [ hotel-icons--size ]" />
-            <p>Restaurant</p>
+            <i className="[ fas fa-store ] [ hotel-icons--size ]" />
+            <p>Supermarket</p>
           </div>
           <div className="[ col-sm-3 ] [ text-center ]">
             <i className="[ fas fa-wifi ] [ hotel-icons--size ]" />
