@@ -12,5 +12,26 @@
     "email": "per@hei.no",
     "checkin": "2019-05-09",
     "checkout": "2019-05-12"
+  },
+  {
+    "establishment": "Peace and Quiet",
+    "clientName": "Jenny Olsen",
+    "email": "jennyols@gmail.com",
+    "checkin": "2019-08-24",
+    "checkout": "2019-08-29"
+  },
+  {
+    "establishment": "Tree Tops",
+    "clientName": "Marius Lunden",
+    "email": "lunden@post.no",
+    "checkin": "2019-07-26",
+    "checkout": "2019-07-30"
+  },
+  {
+    "establishment": "Lodge Hotel",
+    "clientName": "Sara Hjelle",
+    "email": "sara@hotmail.com",
+    "checkin": "2019-06-08",
+    "checkout": "2019-06-16"
   }
 ]
