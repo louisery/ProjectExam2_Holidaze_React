@@ -22,14 +22,18 @@ export default class Admin extends React.Component {
 
         <div className="[ row ] [ enquiries ]">
           <div className="[ col-sm-12 ]">
-            <h2>Enquiries from Enquiry form</h2>
+            <h2 className="[ enquiries__heading--left ]">
+              Enquiries from Enquiry form
+            </h2>
             <EnquiriesComponent />
           </div>
         </div>
 
         <div className="[ row ] [ messages ]">
           <div className="[ col-lg-12 col-md-12 col-sm-12 col-xs-12 ]">
-            <h2>Messages from Contact form</h2>
+            <h2 className="[ enquiries__heading--left ]">
+              Messages from Contact form
+            </h2>
             <MessagesComponent />
           </div>
         </div>

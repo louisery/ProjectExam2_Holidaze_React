@@ -1,6 +1,10 @@
 .enquiries {
     background-color: $dark-blue;
     padding: 30px 40px 5px 40px;
+
+    &__heading--left {
+        text-align: left;
+    }
 }
 
 .messages {
@@ -14,7 +18,7 @@
         font-size: 20px;
     }
 
-    .hr--msg {
+    &__hr--color {
         background-color: $element-blue;
         max-width: 700px;
         margin: 0px;
@@ -25,4 +29,7 @@
 
 .customer-enquiries {
     margin-bottom: 30px;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
