@@ -74,7 +74,7 @@ export default class HotelSpecific extends React.Component {
           <div className="[ col-sm-8 ] [ col-centered ]">
             <img
               src={hotel.imageUrl}
-              className="[ img-fluid ] [ img--rounded ]"
+              className="[ img-fluid ] [ img--rounded ] [ hotel__img--center ]"
             />
           </div>
         </div>
