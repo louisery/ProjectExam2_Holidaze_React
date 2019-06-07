@@ -43,51 +43,44 @@ export default class EstablishmentComponent extends React.Component {
     };
   }
 
-  handleChange = e => {
-    e.preventDefault();
-    const { name, value } = e.target;
+  validateFormData = () => {
     let formErrors = { ...this.state.formErrors };
 
-    switch (name) {
-      case "establishmentName":
-        formErrors.establishmentName =
-          value.length < 2 ? "Minimum 2 characters required" : "";
-        break;
-      case "establishmentEmail":
-        formErrors.establishmentEmail = emailRegex.test(value)
-          ? ""
-          : "Invalid email address";
-        break;
-      case "imageUrl":
-        formErrors.imageUrl = urlRegex.test(value) ? "" : "Invalid image url";
-        break;
-      case "price":
-        formErrors.price = value.length < 2 ? "You must write a price" : "";
-        break;
-      case "maxGuests":
-        formErrors.maxGuests =
-          value.length < 1 ? "You must write max guest capacity" : "";
-        break;
-      case "googleLat":
-        formErrors.googleLat = latRegex.test(value)
-          ? ""
-          : "Invalid Google Latitude";
-        break;
-      case "googleLong":
-        formErrors.googleLong = longRegex.test(value)
-          ? ""
-          : "Invalid Google Longitude";
-        break;
-      case "description":
-        formErrors.description =
-          value.length < 2 ? "You must write a description" : "";
-        break;
-      case "id":
-        formErrors.id = value.length < 2 ? "You must write an id" : "";
-        break;
-    }
+    formErrors.establishmentName =
+      this.state.establishmentName.length < 2 ? "Required field" : "";
+    formErrors.establishmentEmail = emailRegex.test(
+      this.state.establishmentEmail
+    )
+      ? ""
+      : "Invalid email address";
+    formErrors.imageUrl =
+      this.state.imageUrl.length < 2 ? "Required field" : "";
+    formErrors.price = this.state.price.length < 2 ? "Required field" : "";
+    formErrors.maxGuests =
+      this.state.maxGuests.length < 2 ? "Required field" : "";
+    formErrors.googleLat =
+      this.state.googleLat.length < 2 ? "Required field" : "";
+    formErrors.googleLong =
+      this.state.googleLong.length < 2 ? "Required field" : "";
+    formErrors.description =
+      this.state.description.length < 2 ? "Required field" : "";
+    formErrors.id = this.state.id.length < 2 ? "Required field" : "";
+    this.setState({ formErrors });
+  };
 
-    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value }, () => {
+      this.validateFormData();
+    });
+  };
+
+  isFormInvalid = () => {
+    const { clientName, message, email } = this.state.formErrors;
+
+    return (
+      clientName.length !== 0 || message.length !== 0 || email.length !== 0
+    );
   };
 
   render() {

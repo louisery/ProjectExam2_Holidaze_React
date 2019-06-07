@@ -5,66 +5,42 @@ const emailRegex = RegExp(
   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 );
 
-const validateForm = ({ formErrors, ...rest }) => {
-  let valid = true;
-
-  Object.values(formErrors).forEach(value => {
-    value.length > 0 && (valid = false);
-  });
-
-  Object.values(rest).forEach(val => {
-    value === "" && (valid = false);
-  });
-
-  return valid;
-};
-
 export default class EnquiryFormComponent extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      establishment: "",
       clientName: "",
       email: "",
       formErrors: {
-        establishment: "",
         clientName: "",
         email: ""
       }
     };
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
+  validateFormData = () => {
+    let formErrors = { ...this.state.formErrors };
 
-    if (validateForm(this.state)) {
-      window.location.replace("/#/success");
-    }
+    formErrors.clientName =
+      this.state.clientName.length < 2 ? "You must write your name" : "";
+    formErrors.email = emailRegex.test(this.state.email)
+      ? ""
+      : "Invalid email address";
+    this.setState({ formErrors });
   };
 
   handleChange = e => {
-    e.preventDefault();
     const { name, value } = e.target;
-    let formErrors = { ...this.state.formErrors };
+    this.setState({ [name]: value }, () => {
+      this.validateFormData();
+    });
+  };
 
-    switch (name) {
-      case "establishment":
-        formErrors.establishment =
-          value.length < 2 ? "Minimum 2 characters required" : "";
-        break;
-      case "clientName":
-        formErrors.clientName =
-          value.length < 2 ? "You must write a clientName" : "";
-        break;
-      case "email":
-        formErrors.email = emailRegex.test(value)
-          ? ""
-          : "Invalid email address";
-        break;
-    }
+  isFormInvalid = () => {
+    const { clientName, email } = this.state.formErrors;
 
-    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+    return clientName.length !== 0 || email.length !== 0;
   };
 
   render() {
@@ -78,7 +54,6 @@ export default class EnquiryFormComponent extends React.Component {
             method="POST"
             action="http://192.168.64.2/hotel-booking/server/enquiry-success.php"
             className="[ enquiry__form ]"
-            onSubmit={this.handleSubmit}
           >
             <div className="[ form-group ]">
               <label htmlFor="establishment">Establishment:</label>
@@ -86,6 +61,8 @@ export default class EnquiryFormComponent extends React.Component {
                 className="[ form-control ]"
                 name="establishment"
                 id="establishment"
+                aria-required="true"
+                required
               >
                 {EstablishmentsData.map(item => {
                   return (
@@ -160,7 +137,11 @@ export default class EnquiryFormComponent extends React.Component {
                 />
               </div>
             </div>
-            <input type="submit" className="[ btn ] [ btn--expand ]" />
+            <input
+              type="submit"
+              className="[ btn ] [ btn--expand ]"
+              disabled={this.isFormInvalid()}
+            />
           </form>
         </div>
       </div>
