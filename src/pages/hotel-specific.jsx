@@ -27,44 +27,46 @@ export default class HotelSpecific extends React.Component {
       <div>
         <div className="[ row ]">
           <div className="[ col-sm-6 ] [ col-centered ]">
-            <div className="[ character ]">
-              <div className="[ character__info ]">
-                <h1>{hotel.establishmentName}</h1>
-                <div>
-                  <p>{hotel.description}</p>
-                  <p>
-                    Our establishment can have a total of {hotel.maxGuests}{" "}
-                    guests, and one room costs $ {hotel.price} per night.{" "}
-                    {catering} If you have any questions, you are welcome to
-                    reach out to us on our email:{" "}
-                    <a
-                      className="[ hotel__email--color ]"
-                      href={"mailto:" + hotel.establishmentEmail}
-                    >
-                      {hotel.establishmentEmail}.
-                    </a>
-                  </p>
-                </div>
+            <div className="[ hotel ]">
+              <h1>{hotel.establishmentName}</h1>
+              <div>
+                <p>{hotel.description}</p>
+                <p>
+                  Our establishment can have a total of {hotel.maxGuests}{" "}
+                  guests, and one room costs $ {hotel.price} per night.{" "}
+                  {catering} If you have any questions, you are welcome to reach
+                  out to us on our email:{" "}
+                  <a
+                    className="[ hotel__email--color ]"
+                    href={"mailto:" + hotel.establishmentEmail}
+                  >
+                    {hotel.establishmentEmail}.
+                  </a>
+                </p>
+              </div>
+              <div className="[ text-center ] [ hotel__btn--margin ]">
+                <Link to={`/enquiry`} className="[ btn ] [ btn--expand ]">
+                  Make An Enquiry
+                </Link>
               </div>
             </div>
           </div>
         </div>
-
         <div className="[ row ]">
           <div className="[ col-sm-3 ] [ text-center ] [ hotel-icons ]">
-            <i className="[ fas fa-car ] [ hotel-icons--size ]" />
+            <i className="[ fas fa-car ] [ hotel__icons--size ]" />
             <p>Parking</p>
           </div>
           <div className="[ col-sm-3 ] [ text-center ]">
-            <i className="[ fas fa-store ] [ hotel-icons--size ]" />
+            <i className="[ fas fa-store ] [ hotel__icons--size ]" />
             <p>Supermarket</p>
           </div>
           <div className="[ col-sm-3 ] [ text-center ]">
-            <i className="[ fas fa-wifi ] [ hotel-icons--size ]" />
+            <i className="[ fas fa-wifi ] [ hotel__icons--size ]" />
             <p>Free Wi-Fi</p>
           </div>
           <div className="[ col-sm-3 ] [ text-center ]">
-            <i className="[ fas fa-wheelchair ] [ hotel-icons--size ]" />
+            <i className="[ fas fa-wheelchair ] [ hotel__icons--size ]" />
             <p>Handicap Friendly</p>
           </div>
         </div>
@@ -76,24 +78,8 @@ export default class HotelSpecific extends React.Component {
             />
           </div>
         </div>
-        <div className="[ row ]">
-          <div className="[ col-sm-12 ]">
-            <p className="[ text-center ]">google maps location</p>
-          </div>
-        </div>
-        <div className="[ row ]">
-          <div className="[ col-sm-12 ]">
-            <p className="[ text-center ]">self catering</p>
-          </div>
-        </div>
-        <div className="[ row ]">
-          <div className="[ col-sm-12 ] [ text-center ]">
-            <Link to={`/enquiry`} className="[ btn ] [ btn--expand ]">
-              Make An Enquiry
-            </Link>
-          </div>
-        </div>
-        <div className="[ row ] [ hotel-info__split-bg ]">
+
+        <div className="[ row ] [ hotel__info__split-bg ]">
           <div className="[ col-sm-6 ]">
             <h3>Facilities</h3>
             <ul>
