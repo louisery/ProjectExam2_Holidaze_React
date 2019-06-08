@@ -19,6 +19,10 @@ export default class EnquiryFormComponent extends React.Component {
     };
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   validateFormData = () => {
     let formErrors = { ...this.state.formErrors };
 

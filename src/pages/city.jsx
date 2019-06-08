@@ -1,6 +1,10 @@
 import React from "react";
 
 export default class City extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div className="[ row ]">

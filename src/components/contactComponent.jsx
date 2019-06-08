@@ -20,6 +20,10 @@ export default class ContactComponent extends React.Component {
     };
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   validateFormData = () => {
     let formErrors = { ...this.state.formErrors };
 
