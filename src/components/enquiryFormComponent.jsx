@@ -145,6 +145,7 @@ export default class EnquiryFormComponent extends React.Component {
               type="submit"
               className="[ btn ] [ btn--expand ]"
               disabled={this.isFormInvalid()}
+              value="submit"
             />
           </form>
         </div>
