@@ -60,7 +60,7 @@ export default class LoginComponent extends React.Component {
                   class="[ btn ] [ btn--expand ] [ login__button ]"
                   onClick={app.handleLogin}
                 >
-                  Submit <i class="far fa-paper-plane" />
+                  Log in
                 </button>
               </div>
             </form>
