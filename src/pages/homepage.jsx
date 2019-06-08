@@ -65,21 +65,21 @@ export default class Homepage extends React.Component {
           <div className="[ col-sm-4 col-md-4 col-sm-4 col-xs-12 ]">
             <img
               src="https://images.unsplash.com/photo-1510823088177-41fc4b0a6e73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
-              className="[ img-fluid ] [ img--padding ] [ img--rounded ]"
+              className="[ img-fluid ] [ img--rounded ]"
               alt="Bryggen i Bergen by Leonard Rb "
             />
           </div>
           <div className="[ col-sm-4 col-md-4 col-sm-4 col-xs-12 ]">
             <img
               src="https://images.unsplash.com/photo-1542407647-75de2027db53?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80"
-              className="[ img-fluid ] [ img--padding ] [ img--rounded ]"
+              className="[ img-fluid ] [ img--rounded ]"
               alt="Waterfront in snowy Bergen by Ignacio Ceballos"
             />
           </div>
           <div className="[ col-sm-4 col-md-4 col-sm-4 col-xs-12 ]">
             <img
               src="https://images.unsplash.com/photo-1553023158-19763783dfc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-              className="[ img-fluid ] [ img--padding ] [ img--rounded ]"
+              className="[ img-fluid ] [ img--rounded ]"
               alt="Buildings and houses in Bergen by Florencia Viadana"
             />
           </div>
