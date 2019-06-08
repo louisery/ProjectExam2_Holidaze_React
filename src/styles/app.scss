@@ -1,5 +1,6 @@
 // Imports
 @import "partials/variables";
+@import "partials/mixins";
 @import "partials/navbar";
 @import "partials/footer";
 @import "partials/homepage";
@@ -9,7 +10,5 @@
 @import "partials/hotels";
 @import "partials/button";
 @import "partials/success";
-@import "partials/global";
+@import "partials/blocktags.scss";
 @import "partials/city";
-
-

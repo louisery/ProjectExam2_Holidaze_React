@@ -32,10 +32,11 @@ h1 {
 }
 
 // Images
-img {
-    box-shadow: 2px 6px 10px 5px rgba($bg-blue, $alpha: 0.3);
-}
+// img {
+//     @include box-shadow(2px, 6px, 10px, rgba(black, $alpha: 0.3));
+// }
 
 .img--rounded {
-    border-radius: 25px;
+    @include border-radius;
+    @include box-shadow(2px, 6px, 10px, rgba(black, $alpha: 0.3));
 }
