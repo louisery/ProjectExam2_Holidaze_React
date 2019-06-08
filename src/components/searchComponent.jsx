@@ -1,6 +1,7 @@
 import React from "react";
 import EstablishmentsData from "../json/establishments.json";
 import { Link } from "react-router-dom";
+import ToggleDisplay from "react-toggle-display";
 
 export default class SearchComponent extends React.Component {
   constructor(props) {
@@ -8,7 +9,8 @@ export default class SearchComponent extends React.Component {
 
     this.state = {
       searchWord: "",
-      searchResults: []
+      searchResults: [],
+      show: false
     };
   }
 
@@ -24,12 +26,14 @@ export default class SearchComponent extends React.Component {
     if (searchWord.length > 0) {
       this.setState({
         searchWord: searchWord,
-        searchResults: searchHits
+        searchResults: searchHits,
+        show: true
       });
     } else {
       this.setState({
         searchWord: searchWord,
-        searchResults: []
+        searchResults: [],
+        show: false
       });
     }
   }
@@ -64,9 +68,11 @@ export default class SearchComponent extends React.Component {
               ref="searchTerm"
               onChange={this.handleSearch.bind(this)}
             />
-            <div className="[ search__results ]">
-              {this.renderSearchResults()}
-            </div>
+            <ToggleDisplay if={this.state.show}>
+              <div className="[ search__results ]">
+                {this.renderSearchResults()}
+              </div>
+            </ToggleDisplay>
           </div>
         </div>
       </div>

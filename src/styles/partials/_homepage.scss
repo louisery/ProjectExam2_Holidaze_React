@@ -29,23 +29,13 @@
     border-radius: 25px;
     padding: 40px;
 
-    &__links a {
-        color: $light-blue;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
     &__results {
+        background: white;
         padding: 10px;
-
-        // background: white;
-        // border-radius: 10px;
-   
+        border-radius: 15px;
     }
-}
 
-.img--padding {
-    padding: 20px;
+    &__links a {
+        color: $dark-blue;
+    }
 }
