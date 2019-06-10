@@ -20,7 +20,7 @@ export default class NavbarComponent extends React.Component {
           aria-expanded="false"
           aria-label="toggle navigation"
         >
-          <span className="[ navbar-toggler-icon ]" />
+          <i class="[ fas fa-bars ] [ navbar__hamburger--color ]" />
         </button>
 
         <div className="[ collapse navbar-collapse ]" id="navbar-content">
