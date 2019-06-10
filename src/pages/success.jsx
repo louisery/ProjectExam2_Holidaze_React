@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default class Success extends React.Component {
   render() {
@@ -11,12 +12,12 @@ export default class Success extends React.Component {
             <i className="[ fas fa-check ] [ success__icon--color ]" />
           </div>
           <div className="[ text-center ]">
-            <a
-              href="/home"
+            <NavLink
+              to="/"
               className="[ btn ] [ btn--expand ] [ success__btn ]"
             >
               Back to Homepage
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>
