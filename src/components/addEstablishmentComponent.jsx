@@ -56,9 +56,9 @@ export default class EstablishmentComponent extends React.Component {
     formErrors.imageUrl = urlRegex.test(this.state.imageUrl)
       ? ""
       : "Invalid URL";
-    formErrors.price = this.state.price.length < 2 ? "Required field" : "";
+    formErrors.price = this.state.price.length < 1 ? "Required field" : "";
     formErrors.maxGuests =
-      this.state.maxGuests.length < 2 ? "Required field" : "";
+      this.state.maxGuests.length < 1 ? "Required field" : "";
     formErrors.googleLat = latRegex.test(this.state.googleLat)
       ? ""
       : "Invalid Google Latitude";
