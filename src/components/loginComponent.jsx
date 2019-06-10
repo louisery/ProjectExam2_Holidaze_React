@@ -26,7 +26,7 @@ export default class LoginComponent extends React.Component {
             <form className="[ login__form ]" ref="loginForm">
               <div className="[ form-group ]">
                 <label>
-                  <i class="fas fa-user" /> Username:
+                  <i className="[ fas fa-user ]" /> Username:
                 </label>
                 <input
                   type="text"
@@ -41,7 +41,7 @@ export default class LoginComponent extends React.Component {
               </div>
               <div className="[ form-group ]">
                 <label>
-                  <i class="fas fa-unlock-alt" /> Password:
+                  <i className="[ fas fa-unlock-alt ]" /> Password:
                 </label>
                 <input
                   type="password"
