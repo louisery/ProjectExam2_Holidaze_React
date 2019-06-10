@@ -66,7 +66,7 @@ export default class EstablishmentComponent extends React.Component {
       ? ""
       : "Invalid Google Longitude";
     formErrors.description =
-      this.state.description.length < 2 ? "Required field" : "";
+      this.state.description.length < 10 ? "Required field" : "";
     formErrors.id = this.state.id.length < 1 ? "Required field" : "";
     this.setState({ formErrors });
   };
