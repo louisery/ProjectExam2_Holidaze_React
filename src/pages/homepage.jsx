@@ -84,6 +84,14 @@ export default class Homepage extends React.Component {
             />
           </div>
         </div>
+        <div className="attribution">
+          <p>
+            Icons from{" "}
+            <a href="https://icons8.com/" target="_blank">
+              icons 8
+            </a>
+          </p>
+        </div>
       </div>
     );
   }
