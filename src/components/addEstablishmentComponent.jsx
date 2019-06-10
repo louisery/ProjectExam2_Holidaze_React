@@ -53,18 +53,21 @@ export default class EstablishmentComponent extends React.Component {
     )
       ? ""
       : "Invalid email address";
-    formErrors.imageUrl =
-      this.state.imageUrl.length < 2 ? "Required field" : "";
+    formErrors.imageUrl = urlRegex.test(this.state.imageUrl)
+      ? ""
+      : "Invalid URL";
     formErrors.price = this.state.price.length < 2 ? "Required field" : "";
     formErrors.maxGuests =
       this.state.maxGuests.length < 2 ? "Required field" : "";
-    formErrors.googleLat =
-      this.state.googleLat.length < 2 ? "Required field" : "";
-    formErrors.googleLong =
-      this.state.googleLong.length < 2 ? "Required field" : "";
+    formErrors.googleLat = latRegex.test(this.state.googleLat)
+      ? ""
+      : "Invalid Google Latitude";
+    formErrors.googleLong = longRegex.test(this.state.googleLong)
+      ? ""
+      : "Invalid Google Longitude";
     formErrors.description =
       this.state.description.length < 2 ? "Required field" : "";
-    formErrors.id = this.state.id.length < 2 ? "Required field" : "";
+    formErrors.id = this.state.id.length < 1 ? "Required field" : "";
     this.setState({ formErrors });
   };
 
@@ -76,10 +79,26 @@ export default class EstablishmentComponent extends React.Component {
   };
 
   isFormInvalid = () => {
-    const { clientName, message, email } = this.state.formErrors;
+    const {
+      establishmentName,
+      imageUrl,
+      price,
+      maxGuests,
+      googleLat,
+      googleLong,
+      description,
+      id
+    } = this.state.formErrors;
 
     return (
-      clientName.length !== 0 || message.length !== 0 || email.length !== 0
+      establishmentName.length !== 0 ||
+      imageUrl.length !== 0 ||
+      price.length !== 0 ||
+      maxGuests.length !== 0 ||
+      googleLat.length !== 0 ||
+      googleLong.length !== 0 ||
+      description.length !== 0 ||
+      id.length !== 0
     );
   };
 
@@ -333,6 +352,7 @@ export default class EstablishmentComponent extends React.Component {
             <input
               type="submit"
               className="[ btn ] [ btn--expand ]"
+              disabled={this.isFormInvalid()}
               value="submit"
             />
           </form>
