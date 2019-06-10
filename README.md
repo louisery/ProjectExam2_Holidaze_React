@@ -19,6 +19,12 @@ You will also see any lint errors in the console.
 
 ## Server
 - The project uses [PHP](https://github.com/Noroff-Education/project-exam-2).
+- You need to change the beginning of the URLs on the form actions from `http://192.168.64.2/` to ` http://localhost/` or something else to get it to work on your computer. (On the Contact form, Enquiry form and Add Establishment form).
+
+   <form
+            className="[ contact__form ]"
+            method="POST"
+            action="http://192.168.64.2/hotel-booking/server/contact-success.php"
 
 ## My Website
 - Here is a live version of the project: http://louiser.no/projectexam2/index.html#/
