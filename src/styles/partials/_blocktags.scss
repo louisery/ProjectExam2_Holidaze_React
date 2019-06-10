@@ -31,12 +31,15 @@ h1 {
     margin: 0 auto;
 }
 
-// Images
-// img {
-//     @include box-shadow(2px, 6px, 10px, rgba(black, $alpha: 0.3));
-// }
-
 .img--rounded {
     @include border-radius;
     @include box-shadow(2px, 6px, 10px, rgba(black, $alpha: 0.3));
+}
+
+// Large screens size
+@media (min-width: 1025px) {
+    .container-fluid {
+        width: 100%;
+        max-width: 1440px;
+    }
 }
