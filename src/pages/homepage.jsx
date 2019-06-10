@@ -61,6 +61,7 @@ export default class Homepage extends React.Component {
             </a>
           </div>
         </div>
+
         <div className="[ row ]">
           <div className="[ col-sm-4 col-md-4 col-sm-4 col-xs-12 ] [ bergen__img--padding ]">
             <img
@@ -84,7 +85,7 @@ export default class Homepage extends React.Component {
             />
           </div>
         </div>
-        <div className="attribution">
+        <div className="[ attribution ]">
           <p>
             Icons from{" "}
             <a href="https://icons8.com/" target="_blank">
