@@ -1,44 +1,44 @@
 .footer {
-    background-color: $dark-blue;
-    color: white;
+  background-color: $dark-blue;
+  color: white;
 
-    &__text {
-        padding-top: 30px;
-        text-align: left;
-        margin: 0 auto;
+  &__text {
+    padding-top: 30px;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  &__logo--placing {
+    font-family: $logo-font;
+    font-size: 20px;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  &__social {
+    padding-top: 30px;
+    font-size: 40px;
+    color: $light-blue;
+  }
+
+  &__social--link {
+    padding: 10px;
+
+    &:hover {
+      opacity: 0.5;
     }
-
-    &__logo--placing {
-        font-family: $logo-font;
-        font-size: 20px;
-        text-align: left;
-        margin: 0 auto;
-    }
-
-    &__social {
-        padding-top: 30px;
-        font-size: 40px;
-        color: $light-blue;
-    }
-
-    &__social--link {
-        padding: 10px;
-
-        &:hover {
-            opacity: 0.5;
-        }
-    }
+  }
 }
 
 // footer text align center on small screens
 @media (max-width: 800px) {
-    .footer {
-        &__logo--placing {
-            text-align: center;
-        }
-
-        &__copyright--placing {
-            text-align: center;
-        }
+  .footer {
+    &__logo--placing {
+      text-align: center;
     }
+
+    &__copyright--placing {
+      text-align: center;
+    }
+  }
 }
