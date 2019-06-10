@@ -1,5 +1,6 @@
 import React from "react";
 import SearchComponent from "../components/searchComponent";
+import { NavLink } from "react-router-dom";
 
 export default class Homepage extends React.Component {
   render() {
@@ -21,44 +22,44 @@ export default class Homepage extends React.Component {
 
         <div className="[ row ] [ icons ]">
           <div className="[ col-sm-3 col-md-3 col-sm-3 col-xs-12 ] [ text-center ]">
-            <a href="/#/city">
+            <NavLink to="/city">
               <img
                 src="https://img.icons8.com/ios/50/57c4f0/city.png"
                 className="[ img-fluid ] [ icons--opacity ]"
                 alt="City icon from from https://icons8.com/"
               />
               <h2 className="[ icons__heading ]">About the City</h2>
-            </a>
+            </NavLink>
           </div>
           <div className="[ col-sm-3 col-md-3 col-sm-3 col-xs-12 ] [ text-center ]">
-            <a href="/#/hotels">
+            <NavLink to="/hotels">
               <img
                 src="https://img.icons8.com/ios/50/57c4f0/5-star-hotel.png"
                 className="[ img-fluid ] [ icons--opacity ]"
                 alt="Hotel icon from https://icons8.com/"
               />
               <h2 className="[ icons__heading ]">The Hotels</h2>
-            </a>
+            </NavLink>
           </div>
           <div className="[ col-sm-3 col-md-3 col-sm-3 col-xs-12 ] [ text-center ]">
-            <a href="/#/contact">
+            <NavLink to="/contact">
               <img
                 src="https://img.icons8.com/ios/50/57c4f0/message-group.png"
                 className="[ img-fluid ] [ icons--opacity ]"
                 alt="Envelope icon from https://icons8.com/"
               />
               <h2 className="[ icons__heading ]">Contact Us</h2>
-            </a>
+            </NavLink>
           </div>
           <div className="[ col-sm-3 col-md-3 col-sm-3 col-xs-12 ] [ text-center ]">
-            <a href="/#/enquiry">
+            <NavLink to="/enquiry">
               <img
                 src="https://img.icons8.com/ios/50/57c4f0/ball-point-pen.png"
                 className="[ img-fluid ] [ icons--opacity ]"
                 alt="Ball point pen icon from https://icons8.com/"
               />
               <h2 className="[ icons__heading ]">Make an Enquiry</h2>
-            </a>
+            </NavLink>
           </div>
         </div>
 

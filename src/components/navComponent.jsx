@@ -8,9 +8,9 @@ export default class NavbarComponent extends React.Component {
         className="[ navbar navbar-expand-lg navbar-dark ]"
         role="navigation"
       >
-        <a className="[ navbar-brand ] [ navbar__brand ]" href="/home">
+        <NavLink to="/" className="[ navbar-brand ] [ navbar__brand ]">
           Holidaze
-        </a>
+        </NavLink>
         <button
           className="[ navbar-toggler ]"
           type="button"
@@ -26,7 +26,7 @@ export default class NavbarComponent extends React.Component {
         <div className="[ collapse navbar-collapse ]" id="navbar-content">
           <ul className="[ navbar-nav ml-auto ]">
             <li className="[ nav-item ]">
-              <NavLink to="/#/home" className="[ navbar__link ]">
+              <NavLink to="/" className="[ navbar__link ]">
                 Home
               </NavLink>
             </li>
