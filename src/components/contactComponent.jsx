@@ -30,7 +30,9 @@ export default class ContactComponent extends React.Component {
     formErrors.clientName =
       this.state.clientName.length < 2 ? "Minimum 2 characters required" : "";
     formErrors.message =
-      this.state.message.length < 10 ? "You must write a message" : "";
+      this.state.message.length < 10
+        ? "Message must have at least 10 characters"
+        : "";
     formErrors.email = emailRegex.test(this.state.email)
       ? ""
       : "Invalid email address";
