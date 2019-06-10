@@ -20,6 +20,9 @@ You will also see any lint errors in the console.
 ## Server
 - The project uses [PHP](https://github.com/Noroff-Education/project-exam-2).
 
+## My Website
+- Here is a live version of the project: http://louiser.no/projectexam2/index.html#/
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
