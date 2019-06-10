@@ -81,11 +81,11 @@
         padding-bottom: 10px;
     }
 
-&__img--center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+    &__img--center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     &__info__split-bg {
         background: -webkit-linear-gradient(130deg, $dark-blue 70%, $element-blue 40%);

@@ -2,7 +2,7 @@
     font-family: $logo-font;
     font-size: 60px;
     margin-top: 60px;
-    letter-spacing: 15px;
+    letter-spacing: 10px;
 }
 
 .icons {
@@ -38,4 +38,8 @@
     &__links a {
         color: $dark-blue;
     }
+}
+
+.bergen__img--padding {
+    padding: 10px;
 }
