@@ -14,8 +14,8 @@ export default class Admin extends React.Component {
         </div>
 
         <div className="[ row ]">
-          <div className="[ col-lg-12 col-md-12 col-sm-12 col-xs-12 ]">
-            <h2>Add Establishment</h2>
+          <div className="[ col-sm-12 ]">
+            <h2 className="[ establishment__heading ]">Add Establishment</h2>
             <EstablishmentComponent />
           </div>
         </div>
@@ -30,8 +30,8 @@ export default class Admin extends React.Component {
         </div>
 
         <div className="[ row ] [ messages ]">
-          <div className="[ col-lg-12 col-md-12 col-sm-12 col-xs-12 ]">
-            <h2 className="[ enquiries__heading--left ]">
+          <div className="[ col-sm-12 ]">
+            <h2 className="[ messages__heading--left ]">
               Messages from Contact form
             </h2>
             <MessagesComponent />

@@ -9,8 +9,10 @@ export default class EnquiriesComponent extends React.Component {
           {EnquiriesData.map((key, value) => {
             return (
               <div className="[ col-sm-4 ] [ text-center ]">
-                <div className="[ customer-enquiries ]">
-                  <h3>{key.establishment}</h3>
+                <div className="[ enquiries__list ]">
+                  <h3 className="[ enquiries__heading--size ]">
+                    {key.establishment}
+                  </h3>
                   <p>
                     <b>Client Name:</b> {key.clientName}
                   </p>

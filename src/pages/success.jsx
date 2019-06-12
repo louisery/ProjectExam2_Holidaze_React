@@ -7,7 +7,7 @@ export default class Success extends React.Component {
       <div className="[ row ]">
         <div className="[ col-lg-12 col-md-12 col-sm-12 col-xs-12 ]">
           <div className="[ text-center ] [ success ]">
-            <h1>Thank you for Submitting the Form!</h1>
+            <h1>Thank You for Submitting the Form!</h1>
             <p>We will get back to you shortly</p>
             <i className="[ fas fa-check ] [ success__icon--color ]" />
           </div>

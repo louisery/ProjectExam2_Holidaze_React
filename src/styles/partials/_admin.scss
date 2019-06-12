@@ -2,8 +2,19 @@
     background-color: $dark-blue;
     padding: 30px 40px 5px 40px;
 
+    &__heading--size {
+        font-size: 20px;
+    }
+
     &__heading--left {
         text-align: left;
+    }
+
+    &__list {
+        margin-bottom: 30px;
+        text-align: left;
+        margin: 0 auto;
+        margin-bottom: 40px;
     }
 }
 
@@ -14,8 +25,12 @@
     background: linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
     padding: 30px 40px 5px 40px;
 
-    &__heading {
+    &__heading--size {
         font-size: 20px;
+    }
+
+    &__heading--left {
+        text-align: left;
     }
 
     &__hr--color {
@@ -24,11 +39,4 @@
         margin: 0px;
         margin-bottom: 30px;
     }
-}
-
-.customer-enquiries {
-    margin-bottom: 30px;
-    text-align: left;
-    margin: 0 auto;
-    margin-bottom: 40px;
 }

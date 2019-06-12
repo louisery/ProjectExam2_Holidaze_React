@@ -9,7 +9,9 @@ export default class MessagesComponent extends React.Component {
           {ContactData.map((key, value) => {
             return (
               <div>
-                <h3 className="[ messages__heading ]">{key.clientName}</h3>
+                <h3 className="[ messages__heading--size ]">
+                  {key.clientName}
+                </h3>
                 <p>{key.email}</p>
                 <p>"{key.message}"</p>
                 <hr className="[ messages__hr--color ]" />

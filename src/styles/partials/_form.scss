@@ -1,57 +1,13 @@
-// Contact Form
-.contact {
-    &__heading {
-        margin-top: 20px;
-    }
-
-    &__form {
-        @include border-radius;
-
-        background: -webkit-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        background: -o-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        background: -moz-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        background: linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        padding: 40px;
-    }
-}
-
-// Enquiry Form
-.enquiry {
-    &__heading {
-        margin-top: 20px;
-    }
-
-    &__form {
-        @include border-radius;
-
-        background: -webkit-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        background: -o-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        background: -moz-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        background: linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        padding: 40px;
-    }
-}
-
-// Add Establishment Form
-.establishment {
-    &__heading {
-        margin-top: 20px;
-    }
-
-    &__form {
-        @include border-radius;
-
-        background: -webkit-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        background: -o-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        background: -moz-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        background: linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
-        padding: 40px;
-    }
-}
-
 // All forms
 form {
     @include box-shadow(2px, 6px, 10px, rgba(black, $alpha: 0.3));
+    @include border-radius;
+
+    background: -webkit-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+    background: -o-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+    background: -moz-linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+    background: linear-gradient(120deg, $dark-blue 60%, $element-blue 40%);
+    padding: 40px;
 }
 
 .form-control {
