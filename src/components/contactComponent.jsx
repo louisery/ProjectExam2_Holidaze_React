@@ -75,14 +75,11 @@ export default class ContactComponent extends React.Component {
                 type="text"
                 name="clientName"
                 id="clientName"
-                className={`[ form-control ] [ ${
-                  formErrors.clientName.length > 0 ? "form-invalid" : ""
-                } ]`}
+                className="[ form-control ]"
                 noValidate
                 onChange={this.handleChange}
                 aria-required="true"
                 required
-                value={this.state.clientName}
               />
               {formErrors.clientName.length > 0 && (
                 <span className="[ form__error ]">
@@ -96,14 +93,12 @@ export default class ContactComponent extends React.Component {
                 type="text"
                 name="email"
                 id="email"
-                className={`[ form-control ] [ ${
-                  formErrors.email.length > 0 ? "form-invalid" : ""
-                } ]`}
+                className="[ form-control ]"
+                placeholder="example@example.com"
                 noValidate
                 onChange={this.handleChange}
                 aria-required="true"
                 required
-                value={this.state.email}
               />
               {formErrors.email.length > 0 && (
                 <span className="[ form__error ]">
@@ -118,14 +113,10 @@ export default class ContactComponent extends React.Component {
                 id="message"
                 rows="8"
                 cols="80"
-                className={`[ form-control ] [ ${
-                  formErrors.message.length > 0 ? "form-invalid" : ""
-                } ]`}
+                className="[ form-control ]"
                 noValidate
                 onChange={this.handleChange}
                 aria-required="true"
-                required
-                value={this.state.message}
               />
               {formErrors.message.length > 0 && (
                 <span className="[ form__error ]">

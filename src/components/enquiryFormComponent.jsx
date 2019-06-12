@@ -84,9 +84,7 @@ export default class EnquiryFormComponent extends React.Component {
                   type="text"
                   name="clientName"
                   id="clientName"
-                  className={`[ form-control ] [ ${
-                    formErrors.clientName.length > 0 ? "form-invalid" : ""
-                  } ]`}
+                  className="[ form-control ]"
                   noValidate
                   onChange={this.handleChange}
                   aria-required="true"
@@ -104,9 +102,8 @@ export default class EnquiryFormComponent extends React.Component {
                   type="text"
                   name="email"
                   id="email"
-                  className={`[ form-control ] [ ${
-                    formErrors.email.length > 0 ? "form-invalid" : ""
-                  } ]`}
+                  className="[ form-control ]"
+                  placeholder="example@example.com"
                   noValidate
                   onChange={this.handleChange}
                   aria-required="true"

@@ -117,11 +117,7 @@ export default class EstablishmentComponent extends React.Component {
                 <label htmlFor="establishmentName">Establishment Name:</label>
                 <input
                   type="text"
-                  className={`[ form-control ] [ ${
-                    formErrors.establishmentName.length > 0
-                      ? "form-invalid"
-                      : ""
-                  } ]`}
+                  className="[ form-control ]"
                   noValidate
                   onChange={this.handleChange}
                   name="establishmentName"
@@ -141,11 +137,8 @@ export default class EstablishmentComponent extends React.Component {
                 <label htmlFor="establishmentEmail">Establishment Email:</label>
                 <input
                   type="text"
-                  className={`[ form-control ] [ ${
-                    formErrors.establishmentEmail.length > 0
-                      ? "form-invalid"
-                      : ""
-                  } ]`}
+                  className="[ form-control ]"
+                  placeholder="example@example.com"
                   noValidate
                   onChange={this.handleChange}
                   name="establishmentEmail"
@@ -163,9 +156,8 @@ export default class EstablishmentComponent extends React.Component {
                 <label htmlFor="imageUrl">Image URL:</label>
                 <input
                   type="text"
-                  className={`[ form-control ] [ ${
-                    formErrors.imageUrl.length > 0 ? "form-invalid" : ""
-                  } ]`}
+                  className="[ form-control ]"
+                  placeholder="https://images.unsplash.com/photo"
                   noValidate
                   onChange={this.handleChange}
                   name="imageUrl"
@@ -186,9 +178,7 @@ export default class EstablishmentComponent extends React.Component {
                 <label htmlFor="price">Price per person per night ($):</label>
                 <input
                   type="number"
-                  className={`[ form-control ] [ ${
-                    formErrors.price.length > 0 ? "form-invalid" : ""
-                  } ]`}
+                  className="[ form-control ]"
                   noValidate
                   onChange={this.handleChange}
                   name="price"
@@ -206,9 +196,7 @@ export default class EstablishmentComponent extends React.Component {
                 <label htmlFor="maxGuests">Max guests:</label>
                 <input
                   type="number"
-                  className={`[ form-control ] [ ${
-                    formErrors.maxGuests.length > 0 ? "form-invalid" : ""
-                  } ]`}
+                  className="[ form-control ]"
                   noValidate
                   onChange={this.handleChange}
                   name="maxGuests"
@@ -229,9 +217,8 @@ export default class EstablishmentComponent extends React.Component {
                 <label htmlFor="googleLat">Google Coordinates Latitude:</label>
                 <input
                   type="text"
-                  className={`[ form-control ] [ ${
-                    formErrors.googleLat.length > 0 ? "form-invalid" : ""
-                  } ]`}
+                  className="[ form-control ]"
+                  placeholder="60.4546"
                   noValidate
                   onChange={this.handleChange}
                   name="googleLat"
@@ -252,9 +239,8 @@ export default class EstablishmentComponent extends React.Component {
                 </label>
                 <input
                   type="text"
-                  className={`[ form-control ] [ ${
-                    formErrors.googleLong.length > 0 ? "form-invalid" : ""
-                  } ]`}
+                  className="[ form-control ]"
+                  placeholder="7.5890"
                   noValidate
                   onChange={this.handleChange}
                   name="googleLong"
@@ -275,9 +261,8 @@ export default class EstablishmentComponent extends React.Component {
                 <label htmlFor="description">Description:</label>
                 <input
                   type="text"
-                  className={`[ form-control ] [ ${
-                    formErrors.description.length > 0 ? "form-invalid" : ""
-                  } ]`}
+                  className="[ form-control ]"
+                  placeholder="About the establishment"
                   noValidate
                   onChange={this.handleChange}
                   name="description"
@@ -298,9 +283,7 @@ export default class EstablishmentComponent extends React.Component {
                 <label htmlFor="id">ID:</label>
                 <input
                   type="number"
-                  className={`[ form-control ] [ ${
-                    formErrors.id.length > 0 ? "form-invalid" : ""
-                  } ]`}
+                  className="[ form-control ]"
                   noValidate
                   onChange={this.handleChange}
                   name="id"
