@@ -84,12 +84,12 @@ export default class HotelSpecific extends React.Component {
             <h3>Facilities</h3>
             <ul>
               <li>Smoke Free</li>
-              <li>Daily Housekeeping</li>
+              <li>Housekeeping</li>
               <li>Free Wi-Fi</li>
-              <li>Room Service</li>
+              <li>Phone</li>
               <li>Minibar</li>
-              <li>Gym</li>
-              <li>Restaurant</li>
+              <li>Parking</li>
+              <li>Supermarket</li>
             </ul>
           </div>
           <div className="[ col-sm-6 ]">
