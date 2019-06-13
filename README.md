@@ -18,7 +18,8 @@ You will also see any lint errors in the console.
 - Password: `Admin123`
 
 ## Server
-- The project uses [PHP](https://github.com/Noroff-Education/project-exam-2).
+- The project uses [PHP](https://github.com/Noroff-Education/project-exam-2) to post form inputs to JSON files.
+- To make use of the PHP you need to download a local server, such as XAMPP.
 - You need to change the beginning of the URLs on the form actions from `http://192.168.64.2/` to ` http://localhost/` or something else to get it to work on your computer. (On the Contact form, Enquiry form and Add Establishment form).
 
    <form
