@@ -43,7 +43,10 @@ export default class SearchComponent extends React.Component {
       <div className="[ search__links ]">
         {this.state.searchResults.map(r => (
           <Link to={`/hotel-specific/${r.id}`} key={`searchresult-${r.id}`}>
-            <div>{r.establishmentName}</div>
+            <div className="[ search__result--hover ]">
+              <img src={r.imageUrl} className="[ search__img--size ]" />
+              {r.establishmentName}
+            </div>
           </Link>
         ))}
       </div>

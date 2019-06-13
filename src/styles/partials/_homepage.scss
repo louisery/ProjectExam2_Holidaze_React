@@ -1,62 +1,70 @@
 #heading-logo {
-  font-family: $logo-font;
-  font-size: 60px;
-  margin-top: 60px;
-  letter-spacing: 10px;
+    font-family: $logo-font;
+    font-size: 60px;
+    margin-top: 60px;
+    letter-spacing: 10px;
 }
 
 .icons {
-  padding-top: 40px;
+    padding-top: 40px;
 
-  &__heading {
-    font-size: 18px;
-    padding: 5px;
-    color: white !important;
+    &__heading {
+        font-size: 18px;
+        padding: 5px;
+        color: white !important;
 
-    &:hover {
-      text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
+        }
     }
-  }
 
-  &--opacity:hover {
-    opacity: 0.5;
-  }
+    &--opacity:hover {
+        opacity: 0.5;
+    }
 }
 
 .search {
-  background: -webkit-linear-gradient(
-    120deg,
-    $dark-blue 75%,
-    $element-blue 25%
-  );
-  background: -o-linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
-  background: -moz-linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
-  background: linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
-  border-radius: 25px;
-  padding: 40px;
+    background: -webkit-linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    background: -o-linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    background: -moz-linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    background: linear-gradient(120deg, $dark-blue 75%, $element-blue 25%);
+    border-radius: 25px;
+    padding: 40px;
 
-  &__results {
-    background: white;
-    padding: 10px;
-    border-radius: 15px;
-  }
+    &__results {
+        background: white;
+        padding: 10px;
+        border-radius: 15px;
+    }
 
-  &__links a {
-    color: $dark-blue;
-  }
+    &__links a {
+        color: $dark-blue;
+    }
+
+    &__img--size {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+    }
+
+    &__result--hover:hover {
+        background: $dark-blue;
+        color: white;
+    }
 }
 
 .bergen__img--padding {
-  padding: 10px;
+    padding: 10px;
 }
 
 // Icons
 .attribution {
-  font-size: 12px;
-  padding: 5px;
-  text-align: right;
+    font-size: 12px;
+    padding: 5px;
+    text-align: right;
 
-  a {
-    color: $light-blue;
-  }
+    a {
+        color: $light-blue;
+    }
 }
