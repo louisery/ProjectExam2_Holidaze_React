@@ -23,7 +23,7 @@ export default class Admin extends React.Component {
         <div className="[ row ] [ enquiries ]">
           <div className="[ col-sm-12 ]">
             <h2 className="[ enquiries__heading--left ]">
-              Enquiries from Enquiry form
+              Enquiries from Clients
             </h2>
             <EnquiriesComponent />
           </div>
@@ -32,7 +32,7 @@ export default class Admin extends React.Component {
         <div className="[ row ] [ messages ]">
           <div className="[ col-sm-12 ]">
             <h2 className="[ messages__heading--left ]">
-              Messages from Contact form
+              Messages from Clients
             </h2>
             <MessagesComponent />
           </div>
