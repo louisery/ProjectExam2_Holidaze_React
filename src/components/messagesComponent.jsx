@@ -12,7 +12,9 @@ export default class MessagesComponent extends React.Component {
                 <h3 className="[ messages__heading--size ]">
                   {key.clientName}
                 </h3>
-                <p>{key.email}</p>
+                <p>
+                  <a href={"mailto:" + key.email}> {key.email}</a>
+                </p>
                 <p>"{key.message}"</p>
                 <hr className="[ messages__hr--color ]" />
               </div>

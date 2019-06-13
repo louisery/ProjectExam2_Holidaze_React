@@ -17,7 +17,8 @@ export default class EnquiriesComponent extends React.Component {
                     <b>Client Name:</b> {key.clientName}
                   </p>
                   <p>
-                    <b>Email:</b> {key.email}
+                    <b>Email:</b>
+                    <a href={"mailto:" + key.email}> {key.email}</a>
                   </p>
                   <p>
                     <b>Checkin:</b> {key.checkin}
